@@ -1,14 +1,23 @@
 Nav Bar:
 We need a couple of navigation bars.
 
-Home: This will be on the top left of the navigation bar and it will redirect you back to the home page. This will be an alias as Cerulean.
+-Home: This will be on the top left of the navigation bar and it will redirect you back to the home page. This will be an alias as Cerulean.
 	
-Shipping: This bar will have a drop down menu. It will consist of Creating a 	shipiment and rates for shipping.
+-Shipping: This bar will have a drop down menu. It will consist of Creating a 	shipment and rates for shipping.
 	
-Tracking: This bar will redirect you to a tracking page where users can track 	their package using a tracking number.
+-Tracking: This bar will redirect you to a tracking page where users can track 	their package using a tracking number.
 	
-Contact Us: This bar will redirect you to a contact page. This will have a contact phone number and address to our headquarters and our other branches as well
+-Contact Us: This bar will redirect you to a contact page. This will have a contact phone number and address to our headquarters and our other branches as well
 	
-Sign Up/Login: This bar will redirect you to a login page that will prompt for a username and password. 
+-Sign Up/Login: This bar will redirect you to a login page that will prompt for a username and password.
 
+Home page:
+
+-We need a couple of images of Cerulean Shipping Company.
+
+-Pictures of drones, trucks, GPS, boats, etc
+
+-A couple <p> tags describing what services we offer (brief)
+
+Shipping page:
 	
