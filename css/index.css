@@ -1,0 +1,22 @@
+  .copyright {
+    background: #2a52be;
+    color: white;
+    text-align: center;
+  }
+  .navBarCustom {
+    background: #2a52be
+  }
+  .jumbotron {
+    text-align: center;
+  }
+  .image-padding {
+    padding-left: 30px;
+  }
+  .image-resize {
+    width: 450;
+    height: 300;
+  }
+  .description {
+    padding: 15px;
+    text-align: center;
+  }
