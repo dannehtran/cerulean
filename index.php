@@ -32,7 +32,7 @@
 </head>
 <body>
   <!-- THIS IS THE NAV BAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark navbar-static-top navBarCustom">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navBarCustom">
   <!-- THIS IS THE DIV THAT CONTAINS ALL THE TABS FOR THE NAV BAR -->
   <div class="collapse navbar-collapse justify-content-center container" id="navbarSupportedContent">
     <ul class="navbar-nav">
