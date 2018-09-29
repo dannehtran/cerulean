@@ -1,30 +1,8 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <style>
-    .copyright {
-      background: #2a52be;
-      color: white;
-      text-align: center;
-    }
-    .navBarCustom {
-      background: #2a52be
-    }
-    .jumbotron {
-      text-align: center;
-    }
-    .image-padding {
-      padding-left: 30px;
-    }
-    .image-resize {
-      width: 450;
-      height: 300;
-    }
-    .description {
-      padding: 15px;
-      text-align: center;
-    }
-  </style>
+  <!-- EXTERNAL CSS FILE -->
+  <link rel="stylesheet" type="text/css" href="css/index.css">
   <title>Cerulean Shipping Company</title>
   <meta charset="UTF-8">
   <meta name="description" content="We are a shipping company that provide services throughout the United States.">
@@ -79,7 +57,7 @@
   <!-- CERLUEAN SHIPPING JUMBOTRON -->
   <div class="jumbotron" id="backgroundStory">
       <h1 class="jumboHeader">Cerulean Shipping</h1>
-      <p>We are a mid-sized shipping company that provides services over all terrain such as land, sea, and air. We plan on implementing new technologies that are newer to the shipping industry such as drone shipping and GPS location delivery. This can help put us one step ahead on faster delivery times, and change the shipping industry.</p>
+      <p>Cerulean shipping is a mid-sized shipping company that provides services over all terrain such as land, sea, and air. We plan on implementing new technologies that are newer to the shipping industry such as drone shipping and GPS location delivery. This can help put us one step ahead on faster delivery times, and change the shipping industry.</p>
       <p><a class="btn btn-primary" href="#">Learn More</a></p>
   </div>
   <!-- IMAGE CONTAINER-->
@@ -97,9 +75,18 @@
     </div>
     <!-- DESCRIPTION ROW-->
     <div class="row">
-      <div class="col description">Done shipping is our newest shipping technology. We carry out your standard shipment with on the go GPS tracking drone services. Depending on your location, your delivery can be made within a few hours after your order/label has been placed.</div>
+      <div class="col description">Drone delivery is our newest shipping technology. We carry out your standard shipment with drones built with GPS tracking and accurate location services. Depending on your package weight, your delivery can be made within a few hours after your order/label has been placed in our newest branch office.</div>
       <div class="col description"></div>
       <div class="col description"></div>
+    </div>
+    <div class="row">
+      <div class="col buttonAlign">
+        <a class="btn btn-primary" href="#" role="button"> Learn More </a>
+      </div>
+      <div class="col buttonAlign">
+      </div>
+      <div class="col buttonAlign">
+      </div>
     </div>
   </div>
   <!-- START OF FOOTER-->

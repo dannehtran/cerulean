@@ -3,6 +3,10 @@
     color: white;
     text-align: center;
   }
+  .buttonAlign {
+    padding: 10px;
+    text-align: center;
+  }
   .navBarCustom {
     background: #2a52be
   }
