@@ -2,13 +2,14 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<title>SHIPPING</title>
 </head>
 <body>
 	<!-- THIS IS THE NAV BAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navBarCustom">
   <!-- THIS IS THE DIV THAT CONTAINS ALL THE TABS FOR THE NAV BAR -->
-  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse justify-content-center container " id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item dropdown">
         <a class="nav-link" href="index.php" id="HomeNav" role="button">
@@ -34,7 +35,7 @@
             </div>
           </li>
         <li class="nav-item">
-          <a class="nav-link" id="contactUsNav" role="button" href="contact_us.php">Contact Us</a>
+          <a class="nav-link" id="contactUsNav" role="button" href="contact_us.php">Locations</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -61,13 +62,13 @@
 
 
 
-  
+
  <!--shipping page content-->
   <div>
     <h1>Shipment Options</h1>
       <div class="vertical-menu">
          <a href="#NewS" class="active">New Shipment</a><br>
-        <a href="#ExistingS">Existing Shipment</a> 
+        <a href="#ExistingS">Existing Shipment</a>
       </div>
         <br>
       <div>                           <!--return address, ships from here-->
@@ -311,7 +312,7 @@
               </tr>
             </table>
           </form>
-  			   
+
            <button type="submit" value="Submit">SUBMIT</button>
            <button type="reset" value="Reset">RESET</button>
 
@@ -326,18 +327,14 @@
  <!--end of shipping page content-->
 
 
-
-
-
-
-
-
-
-
-
-
-
-
+ <!-- START OF FOOTER-->
+ 	<footer>
+		<!-- Copyright -->
+	 	<div class="footer-copyright py-3 copyright">© 2018 Copyright:
+			<a href="#">Ceruleanshipping.com</a>
+	 	</div>
+ 	</footer>
+ <!-- END OF FOOTER-->
   <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
