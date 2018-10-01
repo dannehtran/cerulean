@@ -15,7 +15,7 @@
   <div class="collapse navbar-collapse justify-content-center container" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item dropdown">
-        <a class="nav-link" href="#" id="shippingNav" role="button">
+        <a class="nav-link" href="shipping.php" id="shippingNav" role="button">
           Shipping
         </a>
         </li>
@@ -33,7 +33,7 @@
             </div>
           </li>
         <li class="nav-item">
-          <a class="nav-link" id="contactUsNav" role="button" href="#">Locations</a>
+          <a class="nav-link" id="contactUsNav" role="button" href="contact_us.php">Locations</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
