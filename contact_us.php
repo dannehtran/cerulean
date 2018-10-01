@@ -2,8 +2,10 @@
 <html>
 <head>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<title>Contact Us</title>
-
+<!-- PLEASE USE CLASS/ID's to use CSS, in case we have multiple tables, th's, td's, etc-->
+<!-- MOVE THIS STYLE BRACKET INTO THE INDEX.CSS SHEET WITH THE NEW FORMAT MENTIONED ABOVE -->
   <style>
     table, th, td {
     border: 1px solid black;
@@ -14,9 +16,9 @@
 <body>
 	<body>
 	<!-- THIS IS THE NAV BAR -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top navBarCustom">
   <!-- THIS IS THE DIV THAT CONTAINS ALL THE TABS FOR THE NAV BAR -->
-  <div class="collapse navbar-collapse justify-content-center" id="navbarSupportedContent">
+  <div class="collapse navbar-collapse justify-content-center container" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item dropdown">
         <a class="nav-link" href="index.php" id="HomeNav" role="button">
@@ -42,7 +44,7 @@
             </div>
           </li>
         <li class="nav-item">
-          <a class="nav-link" id="contactUsNav" role="button" href="contact_us.php">Contact Us</a>
+          <a class="nav-link" id="contactUsNav" role="button" href="contact_us.php">Locations</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -62,7 +64,7 @@
   </div>
 </nav>
   <!-- END OF NAV BAR-->
- 
+
 
 
 
@@ -91,13 +93,13 @@
             <td>cerulean.ground.support@gmail.com</td>
             <td>1.800.464.1020</td>
             <td>600 East Brokaw <br> San Jose, CA 95112 USA</td>
-          </tr> 
+          </tr>
           <tr>
             <td>Cerulean Air Mail</td>
             <td>cerulean.air.support@gmail.com</td>
             <td>1.800.464.2030</td>
             <td>6845 South Las Vegas Blvd<br>Las Vegas, NV 89119 USA</td>
-          </tr> 
+          </tr>
           <tr>
             <td>Cerulean Freight</td>
             <td>cerulean.frieght.support@gmail.com</td>
@@ -120,9 +122,14 @@
 		</article>
   </div>
  <!--end of contact page content-->
-
-
-
+ <!-- START OF FOOTER-->
+ <footer>
+	 <!-- Copyright -->
+	 <div class="footer-copyright py-3 copyright">© 2018 Copyright:
+		 <a href="#">Ceruleanshipping.com</a>
+	 </div>
+ </footer>
+ <!-- END OF FOOTER-->
 
 
 
