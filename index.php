@@ -15,6 +15,11 @@
   <div class="collapse navbar-collapse justify-content-center container" id="navbarSupportedContent">
     <ul class="navbar-nav">
       <li class="nav-item dropdown">
+        <a class="nav-link" href="index.php" id="HomeNav" role="button">
+          Home
+        </a>
+        </li>
+      <li class="nav-item dropdown">
         <a class="nav-link" href="shipping.php" id="shippingNav" role="button">
           Shipping
         </a>
