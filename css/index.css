@@ -13,9 +13,6 @@
   .jumbotron {
     text-align: center;
   }
-  .image-padding {
-    padding-left: 30px;
-  }
   .image-resize {
     width: 450;
     height: 300;
@@ -23,19 +20,4 @@
   .description {
     padding: 15px;
     text-align: center;
-  }
-  
-  table.contactTable {
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-
-  table.contactTable th{
-    border: 1px solid black;
-    border-collapse: collapse;
-  }
-
-  table.contactTable td{
-    border: 1px solid black;
-    border-collapse: collapse;
   }
