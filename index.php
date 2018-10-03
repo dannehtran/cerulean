@@ -1,6 +1,7 @@
 <html>
 <head>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
   <!-- EXTERNAL CSS FILE -->
   <link rel="stylesheet" type="text/css" href="css/index.css">
   <title>Cerulean Shipping Company</title>
@@ -9,8 +10,10 @@
   <meta name="keywords" content="Cerulean, Shipping, Tracking, Drones">
 </head>
 <body>
+
   <!-- THIS IS THE NAV BAR -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top navBarCustom">
+
   <!-- THIS IS THE DIV THAT CONTAINS ALL THE TABS FOR THE NAV BAR -->
   <div class="collapse navbar-collapse justify-content-center container" id="navbarSupportedContent">
     <ul class="navbar-nav">
@@ -58,33 +61,58 @@
   </div>
   </nav>
 <!-- END OF NAV BAR -->
+
 <!-- START OF HOMEPAGE -->
+
   <!-- CERLUEAN SHIPPING JUMBOTRON -->
   <div class="jumbotron" id="backgroundStory">
       <h1 class="jumboHeader">Cerulean Shipping</h1>
       <p>Cerulean shipping is a mid-sized shipping company that provides services over all terrain such as land, sea, and air. We plan on implementing new technologies that are newer to the shipping industry such as drone shipping and GPS location delivery. This can help put us one step ahead on faster delivery times, and change the shipping industry.</p>
       <p><a class="btn btn-primary" href="#">Learn More</a></p>
   </div>
-  <!-- IMAGE CONTAINER-->
-  <div class="container-fluid image-padding shadow rounded">
-    <div class="row">
-      <div class="col">
-        <img class="image-resize" src="images/drone_shipp.PNG" alt="drone">
-      </div>
-      <div class="col">
-        <img class="image-resize" src="#" alt="truck">
-      </div>
-      <div class="col">
-        <img class="image-resze" src="#" alt="ship">
+
+  <!-- STANDARD SHIPPING CARD-->
+  <div class="container-fluid shadow rounded">
+    <div class="row mx-1">
+
+      <!--ACTUAL CARD-->
+      <div class="col-md-12 mb-4">
+        <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2832%29.jpg);">
+          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+            <div>
+              <h6 class="purple-text"><i class="fa fa-plane"></i><strong> Travel</strong></h6>
+              <h3 class="card-title py-3 font-weight-bold"><strong>This is card title</strong></h3>
+              <p class="pb-3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Repellat fugiat, laboriosam, voluptatem,
+                            optio vero odio nam sit officia accusamus minus error nisi architecto nulla ipsum dignissimos.
+                            Odit sed qui, dolorum!
+              </p>
+              <a class="btn btn-secondary btn-rounded"><i class="fa fa-clone left"></i> View project</a>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
+
+    <!-- IMAGE ROWS-->
+    <div class="row mx-1">
+      <div class="col">
+        <img class="image-resize rounded" src="images/drone_shipp.PNG" alt="drone">
+      </div>
+      <div class="col">
+        <img class="image-resize rounded" src="#" alt="truck">
+      </div>
+      <div class="col">
+        <img class="image-resze rounded" src="#" alt="ship">
+      </div>
+    </div>
+
     <!-- DESCRIPTION ROW-->
-    <div class="row">
+    <div class="row mx-1">
       <div class="col description">Drone delivery is our newest shipping technology. We carry out your standard shipment with drones built with GPS tracking and accurate location services. Depending on your package weight, your delivery can be made within a few hours after your order/label has been placed in our newest branch office.</div>
       <div class="col description"></div>
       <div class="col description"></div>
     </div>
-    <div class="row">
+    <div class="row mx-1">
       <div class="col buttonAlign">
         <a class="btn btn-primary" href="#" role="button"> Learn More </a>
       </div>
@@ -94,15 +122,17 @@
       </div>
     </div>
   </div>
+
   <!-- START OF FOOTER-->
   <footer>
+
     <!-- Copyright -->
     <div class="footer-copyright py-3 copyright">© 2018 Copyright:
       <a href="#">Ceruleanshipping.com</a>
     </div>
   </footer>
-  <!-- END OF FOOTER-->
 
+  <!-- END OF FOOTER-->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
