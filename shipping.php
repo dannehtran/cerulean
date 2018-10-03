@@ -1,6 +1,49 @@
 <!DOCTYPE html>
 <html>
 <head>
+
+  <style>
+.dropbtn {
+    background-color: #3498DB;
+    color: white;
+    padding: 50px 160px;
+    font-size: 24px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #2980B9;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100%;
+    overflow: auto;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown a:hover {background-color: #ddd;}
+
+.show {display: block;}
+</style>
+
+
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/index.css">
 	<title>SHIPPING</title>
@@ -56,275 +99,96 @@
   </nav>
   <!-- END OF NAV BAR-->
 
-
-
-
-
-
-
-
- <!--shipping page content-->
   <div>
-    <h1>Shipment Options</h1>
-      <div class="vertical-menu">
-         <a href="#NewS" class="active">New Shipment</a><br>
-        <a href="#ExistingS">Existing Shipment</a>
-      </div>
-        <br>
-      <div>                           <!--return address, ships from here-->
-        <h2 id="NewS"><u>New Shipment</u></h2>
-        <br>
-        <h5><b>Shipping From/ Return To:</b></h5>
+    <h1>Shipping Methods</h1>
+    <p>Click on a shipping method that you would like:</p>
 
-          <form method="">
-            <table>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Drone Shipping</button>
+        <div id="myDropdown" class="dropdown-content">
+          <p>*Drone Shipping is for quick short range deliveries</p>
+          <div>
+            <table class="contactTable">
               <tr>
-                <th>First Name*</th>
-                <th>Last Name*</th>
+                <th>Estimated Delivery Time</th>
+                <th>Delivery Cost</th>
               </tr>
               <tr>
-                <td><input type="text" name="FirstName" required=""></td>
-                <td><input type="text" name="LirstName" required=""></td>
+                <td>2-3 hours</td>
+                <td>$20</td>
               </tr>
               <tr>
-                <th>Address*</th>
+                <td>1 hour</td>
+                <td>$40</td>
               </tr>
               <tr>
-                <td><input type="text" name="Address" required="" placeholder="Street Address"></td>
-              </tr>
-              <tr>
-                <td><input type="text" name="AddressExtra" placeholder="Appartment, Suite, etc."></td>
-              </tr>
-              <tr>
-                <th>ZIP code*</th>
-                <th>City*</th>
-                <th>State*</th>
-              </tr>
-              <tr>
-                <td><input type="text" name="Zip" required=""></td>
-                <td><input type="text" name="City" required=""></td>
-                <td>
-                  <select required="">
-                    <option value="AL">Alabama</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="AR">Arkansas</option>
-                    <option value="CA">California</option>
-                    <option value="CO">Colorado</option>
-                    <option value="CT">Connecticut</option>
-                    <option value="DE">Delaware</option>
-                    <option value="DC">District Of Columbia</option>
-                    <option value="FL">Florida</option>
-                    <option value="GA">Georgia</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="ID">Idaho</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
-                    <option value="IA">Iowa</option>
-                    <option value="KS">Kansas</option>
-                    <option value="KY">Kentucky</option>
-                    <option value="LA">Louisiana</option>
-                    <option value="ME">Maine</option>
-                    <option value="MD">Maryland</option>
-                    <option value="MA">Massachusetts</option>
-                    <option value="MI">Michigan</option>
-                    <option value="MN">Minnesota</option>
-                    <option value="MS">Mississippi</option>
-                    <option value="MO">Missouri</option>
-                    <option value="MT">Montana</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="NV">Nevada</option>
-                    <option value="NH">New Hampshire</option>
-                    <option value="NJ">New Jersey</option>
-                    <option value="NM">New Mexico</option>
-                    <option value="NY">New York</option>
-                    <option value="NC">North Carolina</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="OH">Ohio</option>
-                    <option value="OK">Oklahoma</option>
-                    <option value="OR">Oregon</option>
-                    <option value="PA">Pennsylvania</option>
-                    <option value="RI">Rhode Island</option>
-                    <option value="SC">South Carolina</option>
-                    <option value="SD">South Dakota</option>
-                    <option value="TN">Tennessee</option>
-                    <option value="TX">Texas</option>
-                    <option value="UT">Utah</option>
-                    <option value="VT">Vermont</option>
-                    <option value="VA">Virginia</option>
-                    <option value="WA">Washington</option>
-                    <option value="WV">West Virginia</option>
-                    <option value="WI">Wisconsin</option>
-                    <option value="WY">Wyoming</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th>Email*</th>
-                <th>Phone*</th>
-              </tr>
-              <tr>
-                <td><input type="email" name="Email" required=""></td>
-                <td><input type="text" name="Phone" required=""></td>
+                <td>EXPRESS 15-20 minutes</td>
+                <td>$75</td>
               </tr>
             </table>
+          </div>
+          <a href="shippingForm.php">Shipping Form</a>
+        </div>
+    </div>
 
-        <br>                           <!--Shipping to address-->
-        <h5><b>Shipping To:</b></h5>
-          <form method="">
-            <table>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Air Mail</button>
+        <div id="myDropdown1" class="dropdown-content">
+          <p>Standard Air mail. Cross country/continental</p>
+          <div>
+            <table class="contactTable">
               <tr>
-                <th>First Name*</th>
-                <th>Last Name*</th>
+                <th>Estimated Delivery Time</th>
+                <th>Delivery Cost</th>
               </tr>
               <tr>
-                <td><input type="text" name="FirstName" required=""></td>
-                <td><input type="text" name="LirstName" required=""></td>
+                <td>2-3 weeks</td>
+                <td>$20</td>
               </tr>
               <tr>
-                <th>Address*</th>
+                <td>1 week</td>
+                <td>$40</td>
               </tr>
               <tr>
-                <td><input type="text" name="Address" required="" placeholder="Street Address"></td>
-              </tr>
-              <tr>
-                <td><input type="text" name="AddressExtra" placeholder="Appartment, Suite, etc."></td>
-              </tr>
-              <tr>
-                <th>ZIP code*</th>
-                <th>City*</th>
-                <th>State*</th>
-              </tr>
-              <tr>
-                <td><input type="text" name="Zip" required=""></td>
-                <td><input type="text" name="City" required=""></td>
-                <td>
-                  <select required="">
-                    <option value="AL">Alabama</option>
-                    <option value="AK">Alaska</option>
-                    <option value="AZ">Arizona</option>
-                    <option value="AR">Arkansas</option>
-                    <option value="CA">California</option>
-                    <option value="CO">Colorado</option>
-                    <option value="CT">Connecticut</option>
-                    <option value="DE">Delaware</option>
-                    <option value="DC">District Of Columbia</option>
-                    <option value="FL">Florida</option>
-                    <option value="GA">Georgia</option>
-                    <option value="HI">Hawaii</option>
-                    <option value="ID">Idaho</option>
-                    <option value="IL">Illinois</option>
-                    <option value="IN">Indiana</option>
-                    <option value="IA">Iowa</option>
-                    <option value="KS">Kansas</option>
-                    <option value="KY">Kentucky</option>
-                    <option value="LA">Louisiana</option>
-                    <option value="ME">Maine</option>
-                    <option value="MD">Maryland</option>
-                    <option value="MA">Massachusetts</option>
-                    <option value="MI">Michigan</option>
-                    <option value="MN">Minnesota</option>
-                    <option value="MS">Mississippi</option>
-                    <option value="MO">Missouri</option>
-                    <option value="MT">Montana</option>
-                    <option value="NE">Nebraska</option>
-                    <option value="NV">Nevada</option>
-                    <option value="NH">New Hampshire</option>
-                    <option value="NJ">New Jersey</option>
-                    <option value="NM">New Mexico</option>
-                    <option value="NY">New York</option>
-                    <option value="NC">North Carolina</option>
-                    <option value="ND">North Dakota</option>
-                    <option value="OH">Ohio</option>
-                    <option value="OK">Oklahoma</option>
-                    <option value="OR">Oregon</option>
-                    <option value="PA">Pennsylvania</option>
-                    <option value="RI">Rhode Island</option>
-                    <option value="SC">South Carolina</option>
-                    <option value="SD">South Dakota</option>
-                    <option value="TN">Tennessee</option>
-                    <option value="TX">Texas</option>
-                    <option value="UT">Utah</option>
-                    <option value="VT">Vermont</option>
-                    <option value="VA">Virginia</option>
-                    <option value="WA">Washington</option>
-                    <option value="WV">West Virginia</option>
-                    <option value="WI">Wisconsin</option>
-                    <option value="WY">Wyoming</option>
-                  </select>
-                </td>
-              </tr>
-              <tr>
-                <th>Email</th>
-                <th>Phone</th>
-              </tr>
-              <tr>
-                <td><input type="email" name="Email"></td>
-                <td><input type="text" name="Phone"></td>
+                <td>EXPRESS 1-2 days</td>
+                <td>$100</td>
               </tr>
             </table>
-
-        <br>                      <!--Information regarding package-->
-    		<h5><b>Package Information:</b></h5>
-          <form method="">
-            <table>
-              <tr>
-                <th>Packaging Type*:</th>
-                <th>Package Weight*:</th>
-              </tr>
-              <tr>
-                <td>
-                  <select required="">
-                    <option value="Owners">Your Own</option>
-                    <option value="csLarge">Cerulean-Large</option>
-                    <option value="csMedium">Cerulean-Medium</option>
-                    <option value="csSmall">Cerulean-Small</option>
-                    <option value="csLetter">Cerulean-Letter</option>
-                    <option value="csTube">Cerulean-Tube</option>
-                  </select>
-                </td>
-                <td><input type="text" name="pkWeight" required="" placeholder="----">lbs</td>
-              </tr>
-              <tr>
-                <td colspan="2">If using your own packaging please specify dimensions</td>
-              </tr>
-              <tr>
-                <th>Length:</th>
-                <th>Width:</th>
-                <th>Height:</th>
-              </tr>
-              <tr>
-                <td><input type="txt" name="packageLength">in</td>
-                <td><input type="txt" name="packageWidth">in</td>
-                <td><input type="txt" name="packageHeight">in</td>
-              </tr>
-              <tr>
-                <th>preffered shipping method:</th>
-                <td>
-                  <select required="">
-                    <option value="any">unspecified</option>
-                    <option value="Airmail">Airmail</option>
-                    <option value="Freight">Freight</option>
-                    <option value="Ground">Ground</option>
-                    <option value="Drone">Drone</option>
-                  </select>
-                </td>
-              </tr>
-            </table>
-          </form>
-
-           <button type="submit" value="Submit">SUBMIT</button>
-           <button type="reset" value="Reset">RESET</button>
-
-          </form>
-      </div>
-      <div>
-        <form>
-          <h1 id="ExistingS">Existing Shipment</h1>
-        </form>
-      </div>
+          </div>
+          <a href="shippingForm.php">Shipping Form</a>
+        </div>
+    </div>
   </div>
- <!--end of shipping page content-->
+
+  <script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+
+
+
+
+
+
+
 
 
  <!-- START OF FOOTER-->
