@@ -14,8 +14,8 @@
 <?php
   include "header.php";
  ?>
- <div class="container shadow rounded my-5 px-5">
- <form class="needs-validation py-5 px-5" novalidate>
+ <div class="container signUpForm shadow rounded my-5 px-5">
+ <form class="needs-validation py-4 px-4" novalidate>
    <h1 class="text-center">Sign Up Form</h1>
    <div class="form-row justify-content-center">
      <div class="col-md-5 mb-3">
