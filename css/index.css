@@ -1,5 +1,5 @@
   .copyright {
-    background: #2a52be;
+    background: #A9A9A9;
     color: white;
     text-align: center;
   }
@@ -7,8 +7,11 @@
     padding: 10px;
     text-align: center;
   }
+  .buttonColor {
+    background: #2a52be;
+  }
   .navBarCustom {
-    background: #2a52be
+    background: #A9A9A9;
   }
   .jumbotron {
     text-align: center;
