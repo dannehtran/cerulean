@@ -1,6 +1,3 @@
-<?php
-  session_start();
-?>
 <!-- START OF FOOTER-->
 <footer>
 
