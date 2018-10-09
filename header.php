@@ -9,11 +9,10 @@
   <!-- THIS IS THE DIV THAT CONTAINS ALL THE TABS FOR THE NAV BAR -->
   <div class="collapse navbar-collapse justify-content-center container" id="navbarSupportedContent">
     <ul class="navbar-nav">
-      <li class="nav-item dropdown">
-        <a class="nav-link" href="index.php" id="HomeNav" role="button">
-          Home
+      <li class="nav-item">
+        <a class="navbar-brand" href="index.php">
+          <img src="images/cerulean_logo.png" width="30" height="30" alt="">
         </a>
-        </li>
       <li class="nav-item dropdown">
         <a class="nav-link" href="shipping.php" id="shippingNav" role="button">
           Shipping
@@ -62,7 +61,7 @@
               echo '<button type="submit" class="btn btn-primary">LOGIN</button>';
               echo '</form>';
               echo '<div class="dropdown-divider"></div>';
-              echo '<a class="dropdown-item" href="#">Make An Account</a>';
+              echo '<a class="dropdown-item" href="register.php">Make An Account</a>';
               echo '</div>';
             }
           ?>
