@@ -3,7 +3,7 @@
 
   <!-- Copyright -->
   <div class="footer-copyright py-3 copyright">© 2018 Copyright:
-    <a href="#">Ceruleanshipping.com</a>
+    <a class="copyRightDefault" href="#">Ceruleanshipping.com</a>
   </div>
 </footer>
 
