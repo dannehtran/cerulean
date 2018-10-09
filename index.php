@@ -23,7 +23,16 @@
   <div class="jumbotron" id="backgroundStory">
       <h1 class="jumboHeader">Cerulean Shipping</h1>
       <p>Cerulean shipping is a mid-sized shipping company that provides services over all terrain such as land, sea, and air. We plan on implementing new technologies that are newer to the shipping industry such as drone shipping and GPS location delivery. This can help put us one step ahead on faster delivery times, and change the shipping industry.</p>
-      <p><a class="btn btn-secondary btn-rounded buttonColor" href="#">Learn More</a></p>
+      <div class="col-lg-6 trackingNumber2">
+        <form>
+          <div class="form-row py-5">
+            <div class="col-9">
+              <input type="tracking" class="form-control form-control-lg" id="trackingNumber2" placeholder="Tracking ID">
+            </div>
+              <button type="submit" class="btn btn-secondary buttonColor">Track</button>
+          </div>
+        </form>
+      </div>
   </div>
 
   <!-- STANDARD SHIPPING CARD-->
@@ -33,9 +42,9 @@
       <!--ACTUAL CARD-->
       <div class="col-md-12 mb-4">
         <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2832%29.jpg);">
-          <div class="text-white text-center d-flex align-items-center rgba-black-strong py-5 px-4">
+          <div class="text-white text-center align-items-center rgba-black-strong py-5 px-5">
             <div>
-              <h3 class="card-title py-3 font-weight-bold"><strong>Standard Shipping</strong></h3>
+              <h3 class="card-title py-2 font-weight-bold">Standard Shipping</h3>
               <p class="pb-3">Cerulean Shipping offers the greatest on land delivery throughout the United States! We ship
                               everywhere across the nation with flat fees and no hidden charges. Click below to learn more!
               </p>
@@ -47,7 +56,7 @@
     </div>
 
     <!-- IMAGE ROWS-->
-    <div class="row mx-1">
+    <div class="row mx-2 py-5">
       <div class="col">
         <img class="image-resize rounded" src="images/drone_shipp.PNG" alt="drone">
       </div>
@@ -63,7 +72,7 @@
     <div class="row mx-1">
       <div class="col description">Drone delivery is our newest shipping technology. We carry out your standard shipment with drones built with GPS tracking and accurate location services. Depending on your package weight, your delivery can be made within a few hours after your order/label has been placed in our newest branch office.</div>
       <div class="col description">Want your package delivered within 1 - 2 days? Have your package shipped overnight using our private planes dedicated to delivering your pacakage on time! We offer competitive prices and flat rates, while ensuring safety and accuracy!</div>
-      <div class="col description"></div>
+      <div class="col description">Why not deliver your package via boat? With Cerulean shipping, we deliver packages with our custom speedboats! Boat delivery is only available in Hawaii as of now, but we will be expanding this service in the near future! </div>
     </div>
     <div class="row mx-1">
       <div class="col buttonAlign">
