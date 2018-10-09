@@ -22,10 +22,10 @@
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Tracking
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <div class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
             <form>
-              <input type="tracking" class="form-control" id="trackingNumber1" placeholder="Tracking ID">
-              <button type="submit" class="btn btn-primary">Submit</button>
+              <input type="tracking" class="form-control form-control-lg" id="trackingNumber1" placeholder="Tracking ID">
+              <button type="submit" class="btn btn-secondary btn-block btn-lg buttonColor">Track</button>
             </form>
             <div class="dropdown-divider"></div>
               <a class="dropdown-item" href="#">More Tracking Information</a>
@@ -55,10 +55,10 @@
                 Log In or Sign Up
               </a>';
               echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
-              echo '<form>';
-              echo '<input type="username" class="form-control" id="userID1" placeholder="User ID">';
-              echo '<input type="password" class="form-control" id="password1" placeholder="Password">';
-              echo '<button type="submit" class="btn btn-primary">LOGIN</button>';
+              echo '<form class="p-3">';
+              echo '<input type="username" class="form-control form-control-lg" id="userID1" placeholder="User ID">';
+              echo '<input type="password" class="form-control form-control-lg" id="password1" placeholder="Password">';
+              echo '<button type="submit" class="btn btn-secondary btn-block btn-lg buttonColor">LOGIN</button>';
               echo '</form>';
               echo '<div class="dropdown-divider"></div>';
               echo '<a class="dropdown-item" href="register.php">Make An Account</a>';
