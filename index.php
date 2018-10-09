@@ -4,17 +4,21 @@
 
   <!-- EXTERNAL CSS FILE -->
   <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <!-- Logo Icon -->
+  <link rel="icon" href="images/cerulean_logo.png">
   <title>Cerulean Shipping Company</title>
   <meta charset="UTF-8">
   <meta name="description" content="We are a shipping company that provide services throughout the United States.">
   <meta name="keywords" content="Cerulean, Shipping, Tracking, Drones">
 </head>
+
 <!-- HEADER -->
 <?php
   include "header.php";
  ?>
 <!-- START OF HOMEPAGE -->
-
+  <img class="ceruleanLogo" src="images/cl_logo.png">
   <!-- CERLUEAN SHIPPING JUMBOTRON -->
   <div class="jumbotron" id="backgroundStory">
       <h1 class="jumboHeader">Cerulean Shipping</h1>
@@ -48,7 +52,7 @@
         <img class="image-resize rounded" src="images/drone_shipp.PNG" alt="drone">
       </div>
       <div class="col">
-        <img class="image-resize rounded" src="#" alt="truck">
+        <img class="image-resize rounded" src="#" alt="airplane">
       </div>
       <div class="col">
         <img class="image-resze rounded" src="#" alt="ship">
@@ -58,7 +62,7 @@
     <!-- DESCRIPTION ROW-->
     <div class="row mx-1">
       <div class="col description">Drone delivery is our newest shipping technology. We carry out your standard shipment with drones built with GPS tracking and accurate location services. Depending on your package weight, your delivery can be made within a few hours after your order/label has been placed in our newest branch office.</div>
-      <div class="col description"></div>
+      <div class="col description">Want your package delivered within 1 - 2 days? Have your package shipped overnight using our private planes dedicated to delivering your pacakage on time! We offer competitive prices and flat rates, while ensuring safety and accuracy!</div>
       <div class="col description"></div>
     </div>
     <div class="row mx-1">
@@ -66,8 +70,10 @@
         <a class="btn btn-secondary btn-rounded buttonColor" href="#" role="button"> Learn More </a>
       </div>
       <div class="col buttonAlign">
+        <a class="btn btn-secondary btn-rounded buttonColor" href="#" role="button"> Learn More </a>
       </div>
       <div class="col buttonAlign">
+        <a class="btn btn-secondary btn-rounded buttonColor" href="#" role="button"> Learn More </a>
       </div>
     </div>
   </div>
