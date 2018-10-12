@@ -1,0 +1,15 @@
+
+  .contactTable {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  .contactTable th{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+
+  .contactTable td{
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
