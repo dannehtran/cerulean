@@ -1,6 +1,21 @@
 <?php
   session_start();
 ?>
+<html>
+<head>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <!-- EXTERNAL CSS FILE -->
+  <link rel="stylesheet" type="text/css" href="css/index.css">
+
+  <!-- Logo Icon -->
+  <link rel="icon" href="images/cerulean_logo.png">
+  <title>Cerulean Shipping Company</title>
+  <meta charset="UTF-8">
+  <meta name="description" content="We are a shipping company that provide services throughout the United States.">
+  <meta name="keywords" content="Cerulean, Shipping, Tracking, Drones">
+</head>
+
 <body>
 
   <!-- THIS IS THE NAV BAR -->
