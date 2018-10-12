@@ -53,9 +53,9 @@
 
           <!-- PHP CODE THAT CHANGES THE HTML IF USER IS LOGGED IN -->
           <?php
-            if($_SESSION['u_name']) {
+            if(isset($_SESSION['u_name'])) {
               echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                ', $_SESSION[d_name], '
+                ', $_SESSION['d_name'], '
               </a>';
               echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
               echo '<form action="logout.php" method="POST"><button type="submit" name="submit" action="logout.php" method="POST">Logout</button></form>';
@@ -70,14 +70,19 @@
                 Log In or Sign Up
               </a>';
               echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
-              echo '<form class="p-3">';
-              echo '<input type="username" class="form-control form-control-lg" id="userID1" placeholder="User ID">';
-              echo '<input type="password" class="form-control form-control-lg" id="password1" placeholder="Password">';
-              echo '<button type="submit" class="btn btn-secondary btn-block btn-lg buttonColor">LOGIN</button>';
+              echo '<form method="POST" action="handlers/loginHandler.php" class="p-3">';
+              echo '<input type="text" class="form-control form-control-lg" name="username" placeholder="Username">';
+              echo '<input type="password" class="form-control form-control-lg" name="password" placeholder="Password">';
+              echo '<button type="submit" name="login" action="handlers/loginHandler.php" class="btn btn-secondary btn-block btn-lg buttonColor">LOGIN</button>';
               echo '</form>';
               echo '<div class="dropdown-divider"></div>';
               echo '<a class="dropdown-item" href="register.php">Make An Account</a>';
               echo '</div>';
+              echo '</li>';
+              echo '<li class="nav-item drop-dropdown">';
+              echo '<form method="POST" action="handlers/logoutHandler.php">';
+              echo '<button type="submit" name="logout" action="handlers/logoutHandler.php" class="btn btn-secondary btn-block buttonColor">LOGOUT(TEST)</button>';
+              echo '</form>';
             }
           ?>
         </li>
