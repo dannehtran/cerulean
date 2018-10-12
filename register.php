@@ -1,18 +1,6 @@
-<html>
-<head>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-  <!-- EXTERNAL CSS FILE -->
-  <link rel="stylesheet" type="text/css" href="css/index.css">
-  <title>Sign Up</title>
-  <meta charset="UTF-8">
-  <meta name="description" content="We are a shipping company that provide services throughout the United States.">
-  <meta name="keywords" content="Cerulean, Shipping, Tracking, Drones">
-</head>
-
 <!-- HEADER -->
 <?php
-  include "header.php";
+  include_once "header.php";
  ?>
  <div class="container signUpForm shadow rounded my-5 px-5">
  <form class="needs-validation py-4 px-4" novalidate>
@@ -110,5 +98,5 @@
 </div>
 <script src="script/validation.js"></script>
 <?php
-  include "footer.php";
+  include_once "footer.php";
  ?>
