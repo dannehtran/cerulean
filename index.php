@@ -1,6 +1,6 @@
 <!-- HEADER -->
 <?php
-  include_once "header.php";
+  include "header.php";
  ?>
 <!-- START OF HOMEPAGE -->
   <img class="ceruleanLogo" src="images/cl_logo.png">
@@ -26,7 +26,7 @@
 
       <!--ACTUAL CARD-->
       <div class="col-md-12 mb-4">
-        <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/img%20%2832%29.jpg);">
+        <div class="card card-image" style="background-image: url(images/truck.jpg);">
           <div class="text-white text-center align-items-center rgba-black-strong py-5 px-5">
             <div>
               <h3 class="card-title py-2 font-weight-bold">Standard Shipping</h3>
@@ -46,10 +46,10 @@
         <img class="image-resize rounded" src="images/drone_shipp.PNG" alt="drone">
       </div>
       <div class="col">
-        <img class="image-resize rounded" src="#" alt="airplane">
+        <img class="image-resize rounded" src="images/airplane.jpg" alt="airplane">
       </div>
       <div class="col">
-        <img class="image-resze rounded" src="#" alt="ship">
+        <img class="image-resize rounded" src="images/boat.jpg" alt="ship">
       </div>
     </div>
 
