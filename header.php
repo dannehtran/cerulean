@@ -47,7 +47,7 @@
             </div>
           </li>
         <li class="nav-item">
-          <a class="nav-link" id="contactUsNav" role="button" href="contact_us.php">Locations</a>
+          <a class="nav-link" id="contactUsNav" role="button" href="locations.php">Locations</a>
         </li>
         <li class="nav-item dropdown">
 
