@@ -55,14 +55,13 @@
           <?php
             if(isset($_SESSION['u_name'])) {
               echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                ', $_SESSION['d_name'], '
+                Welcome, ', $_SESSION['f_name'], '
               </a>';
               echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
-              echo '<form action="logout.php" method="POST"><button type="submit" name="submit" action="logout.php" method="POST">Logout</button></form>';
+              echo '<a class="dropdown-item" href="#">My Tracking Numbers</a>';
+              echo '<a class="dropdown-item" href="#">My Purchase History</a>';
               echo '<div class="dropdown-divider"></div>';
-              echo '<a class="dropdown-item" href="#">My Tracking Numbers</div>';
-              echo '<div class="dropdown-divider"></div>';
-              echo '<a class="dropdown-item" href="#">My Purchase History</div>';
+              echo '<form action="handlers/logoutHandler.php" method="POST"><button class="btn btn-secondary btn-block buttonColor" type="submit" name="logout" action="handlers/logoutHandler.php" method="POST">Logout</button></form></div>';
               echo '</div>';
             }
             else {
@@ -80,9 +79,6 @@
               echo '</div>';
               echo '</li>';
               echo '<li class="nav-item drop-dropdown">';
-              echo '<form method="POST" action="handlers/logoutHandler.php">';
-              echo '<button type="submit" name="logout" action="handlers/logoutHandler.php" class="btn btn-secondary btn-block buttonColor">LOGOUT(TEST)</button>';
-              echo '</form>';
             }
           ?>
         </li>
