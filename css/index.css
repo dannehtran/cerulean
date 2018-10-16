@@ -46,9 +46,22 @@
     display: block;
   }
   .copyRightDefault {
-    color:white;
+    color: white;
+  }
+  .special_card {
+    background-color: rgba(245, 245, 245, 1);
+    opacity: .6;
+  }
+  .text_special {
+    color: #2a52be;
+  }
+  .image_header {
+    padding-top: 130px;
   }
   body {
     padding-top: 100px;
     background-color: #e9ecef;
+  }
+  footer {
+    padding-top: 50px;
   }
