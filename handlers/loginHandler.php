@@ -7,7 +7,7 @@ if(isset($_POST["login"])) {
   $password = $_POST['password'];
   //echo $_POST['username'] . "STRING1";
   if (empty($user_mail) || empty($password)) {
-    header("Location: ../index.php");
+    header("Location: ../index.php?error=noUsernameOrPassword");
     exit();
   }
   else {
