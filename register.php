@@ -15,7 +15,7 @@
      </div>
      <div class="col-md-5 mb-3">
        <label for="validationCustom02">Password</label>
-       <input type="text" class="form-control" name="password_reg" id="validationCustom02" placeholder="Password" required>
+       <input type="password" class="form-control" name="password_reg" id="validationCustom02" placeholder="Password" required>
        <div class="invalid-feedback">
          Please enter a password.
        </div>
@@ -31,7 +31,7 @@
      </div>
      <div class="col-md-5 mb-3">
        <label for="validationCustom04">Re-type password</label>
-       <input type="text" class="form-control" name="password2_reg" id="validationCustom04" placeholder="Confirm Password" required>
+       <input type="password" class="form-control" name="password2_reg" id="validationCustom04" placeholder="Confirm Password" required>
        <div class="invalid-feedback">
          Please enter your password again.
        </div>
