@@ -33,7 +33,7 @@
               <p class="pb-3">Cerulean Shipping offers the greatest on land delivery throughout the United States! We ship
                               everywhere across the nation with flat fees and no hidden charges. Click below to learn more!
               </p>
-              <a class="btn btn-secondary buttonColor btn-rounded"><i class="fa fa-clone left"></i>Learn More</a>
+              <a class="btn btn-secondary buttonColor btn-rounded" href="shipping.php"><i class="fa fa-clone left"></i>Learn More</a>
             </div>
           </div>
         </div>
@@ -61,13 +61,13 @@
     </div>
     <div class="row mx-1">
       <div class="col buttonAlign">
-        <a class="btn btn-secondary btn-rounded buttonColor" href="#" role="button"> Learn More </a>
+        <a class="btn btn-secondary btn-rounded buttonColor" href="shipping.php" role="button"> Learn More </a>
       </div>
       <div class="col buttonAlign">
-        <a class="btn btn-secondary btn-rounded buttonColor" href="#" role="button"> Learn More </a>
+        <a class="btn btn-secondary btn-rounded buttonColor" href="shipping.php" role="button"> Learn More </a>
       </div>
       <div class="col buttonAlign">
-        <a class="btn btn-secondary btn-rounded buttonColor" href="#" role="button"> Learn More </a>
+        <a class="btn btn-secondary btn-rounded buttonColor" href="shipping.php" role="button"> Learn More </a>
       </div>
     </div>
   </div>
