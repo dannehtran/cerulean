@@ -60,7 +60,7 @@ if (isset($_POST['register'])) {
       exit();
     }
     else {
-      $sql = "INSERT INTO users (username, password, firstname, lastname, email, address, address2, city, state, zipcode, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+      $sql = 'INSERT INTO customers (username, password, firstname, lastname, email, address, address2, city, state, zipcode, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)';
       $stmt = mysqli_stmt_init($connection);
       if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("Location: ../register.php?error=sqlError");
@@ -68,7 +68,7 @@ if (isset($_POST['register'])) {
       }
       else {
         $hashedpassword = password_hash($password, PASSWORD_DEFAULT)
-        mysqli_stmt_bind_param($stmt, "sssssssss", $username, $hashedpassword, $mail, $address, $address2, $city, $state, $zipcode, $phone);
+        mysqli_stmt_bind_param($stmt, "sssssssssss", $username, $hashedpassword, $firstname, $lastname, $mail, $address, $address2, $city, $state, $zipcode, $phone);
         mysqli_stmt_execute($stmt);
         header("Location: ../register.php?register=success");
         exit();
