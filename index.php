@@ -22,67 +22,59 @@
       </div>
   </div>
 
-  <!-- STANDARD SHIPPING CARD-->
+  <!-- Card Containers -->
   <div class="container-fluid">
-    <div class="row mx-5">
+    <div class="row mx-5 d-flex align-items-stretch shadow rounded">
 
-      <!--ACTUAL CARD-->
-      <div class="col-5 mb-4 mx-auto align-items-center">
-        <div class="card card-image img-fluid special_card" style="background-image: url(images/truck.jpg);">
-          <div class="text-center align-items-center rgba-black-strong py-5 px-5">
-            <div class="text_special">
-              <h3 class="card-title py-2 font-weight-bold">Standard Shipping</h3>
-              <p class="pb-3"><strong>Cerulean Shipping offers the greatest on land delivery throughout the United States! We ship
-                              everywhere across the nation with flat fees and no hidden charges. Click below to learn more!
-              </strong></p>
-              <a class="btn btn-secondary buttonColor btn-rounded" href="shipping.php"><i class="fa fa-clone left"></i>Learn More</a>
-            </div>
+      <!--Standard Shipping Card-->
+      <div class="card py-3 border_color" style="width:100%">
+        <img class="card-img-top image-resize" src="images/truck.jpg" alt="truck">
+        <div class="card-body buttonAlign">
+          <h4 class="card-title">Standard Shipping</h4>
+          <p class="card-text">Cerulean Shipping offers the greatest on land delivery throughout the United States! We ship
+                          everywhere across the nation with flat fees and no hidden charges. Click below to learn more!</p>
+          <a href="shipping.php" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
+        </div>
+      </div>
+  </div>
+
+    <!-- ROW FOR DRONE, AIR, AND OCEAN CARDS -->
+    <div class="row mx-5 py-5">
+
+      <!-- Drone Shipping Card -->
+      <div class="col-4 d-flex align-items-stretch">
+        <div class="card shadow rounded border_color" style="width:400px">
+          <img class="card-img-top image-resize" src="images/drone_shipp.PNG" alt="drone">
+          <div class="card-body buttonAlign">
+            <h4 class="card-title">Drone Shipping</h4>
+            <p class="card-text">Drone delivery is our newest shipping technology. We carry out your standard shipment with drones built with GPS tracking and accurate location services. Depending on your package weight, your delivery can be made within a few hours after your order/label has been placed in our newest branch office.</p>
+            <a href="shipping.php" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
           </div>
         </div>
       </div>
-    </div>
 
-    <!--IMAGE HEADER ROW -->
-    <div class="row mx-2 text-center align-items-center image_header">
-      <div class="col">
-        <h3><strong>Drone Shipping</strong></h3>
+      <!-- Airplane Shipping Card -->
+      <div class="col-4 d-flex align-items-stretch">
+        <div class="card border_color shadow rounded" style="width:400px">
+          <img class="card-img-top image-resize" src="images/airplane.jpg" alt="airplane">
+          <div class="card-body buttonAlign">
+            <h4 class="card-title">Air Freight Shipping</h4>
+            <p class="card-text">Want your package delivered within 1 - 2 days? Have your package shipped overnight using our private planes dedicated to delivering your pacakage on time! We offer competitive prices and flat rates, while ensuring safety and accuracy!</p>
+            <a href="shipping.php" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
+          </div>
+        </div>
       </div>
-      <div class="col">
-        <h3><strong>Air Freight Shipping</strong></h3>
-      </div>
-      <div class="col">
-        <h3><strong>Ocrean Freight Shipping</strong></h3>
-      </div>
-    </div>
 
-    <!-- IMAGE ROW-->
-    <div class="row mx-2 py-5 align-items-center">
-      <div class="col">
-        <img class="image-resize rounded" src="images/drone_shipp.PNG" alt="drone">
-      </div>
-      <div class="col">
-        <img class="image-resize rounded" src="images/airplane.jpg" alt="airplane">
-      </div>
-      <div class="col">
-        <img class="image-resize rounded" src="images/boat.jpg" alt="ship">
-      </div>
-    </div>
-
-    <!-- DESCRIPTION ROW-->
-    <div class="row mx-1">
-      <div class="col description"><strong>Drone delivery is our newest shipping technology. We carry out your standard shipment with drones built with GPS tracking and accurate location services. Depending on your package weight, your delivery can be made within a few hours after your order/label has been placed in our newest branch office.</strong></div>
-      <div class="col description"><strong>Want your package delivered within 1 - 2 days? Have your package shipped overnight using our private planes dedicated to delivering your pacakage on time! We offer competitive prices and flat rates, while ensuring safety and accuracy!</strong></div>
-      <div class="col description"><strong>Why not deliver your package via boat? With Cerulean shipping, we deliver packages with our custom speedboats! Boat delivery is only available in Hawaii as of now, but we will be expanding this service in the near future! </strong></div>
-    </div>
-    <div class="row mx-1">
-      <div class="col buttonAlign">
-        <a class="btn btn-secondary btn-rounded buttonColor" href="shipping.php" role="button"> Learn More </a>
-      </div>
-      <div class="col buttonAlign">
-        <a class="btn btn-secondary btn-rounded buttonColor" href="shipping.php" role="button"> Learn More </a>
-      </div>
-      <div class="col buttonAlign">
-        <a class="btn btn-secondary btn-rounded buttonColor" href="shipping.php" role="button"> Learn More </a>
+      <!-- Boat Shipping Card -->
+      <div class="col-4 d-flex align-items-stretch">
+        <div class="card border_color shadow rounded" style="width:400px">
+          <img class="card-img-top image-resize" src="images/boat.jpg" alt="boat">
+          <div class="card-body buttonAlign">
+            <h4 class="card-title">Ocean Freight Shipping</h4>
+            <p class="card-text">Why not deliver your package via boat? With Cerulean shipping, we deliver packages with our custom speedboats! Boat delivery is only available in Hawaii as of now, but we will be expanding this service in the near future!</p>
+            <a href="shipping.php" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
+          </div>
+        </div>
       </div>
     </div>
   </div>
