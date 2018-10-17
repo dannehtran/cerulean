@@ -43,11 +43,11 @@
     </div>
 
     <!-- ROW FOR DRONE, AIR, AND OCEAN CARDS -->
-    <div class="row mx-5 py-5">
+    <div class="row py-5">
 
       <!-- Drone Shipping Card -->
       <div class="col-4 d-flex align-items-stretch">
-        <div class="card shadow rounded border_color" style="width:400px">
+        <div class="card mx-auto shadow rounded border_color" style="width:400px">
           <img class="card-img-top image-resize" src="images/drone_shipp.PNG" alt="drone">
           <div class="card-body buttonAlign">
             <h4 class="card-title">Drone Shipping</h4>
@@ -59,7 +59,7 @@
 
       <!-- Airplane Shipping Card -->
       <div class="col-4 d-flex align-items-stretch">
-        <div class="card border_color shadow rounded" style="width:400px">
+        <div class="card mx-auto border_color shadow rounded" style="width:400px">
           <img class="card-img-top image-resize" src="images/airplane.jpg" alt="airplane">
           <div class="card-body buttonAlign">
             <h4 class="card-title">Air Freight Shipping</h4>
@@ -71,7 +71,7 @@
 
       <!-- Boat Shipping Card -->
       <div class="col-4 d-flex align-items-stretch">
-        <div class="card border_color shadow rounded" style="width:400px">
+        <div class="card mx-auto border_color shadow rounded" style="width:400px">
           <img class="card-img-top image-resize" src="images/boat.jpg" alt="boat">
           <div class="card-body buttonAlign">
             <h4 class="card-title">Ocean Freight Shipping</h4>
