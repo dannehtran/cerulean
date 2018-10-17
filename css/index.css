@@ -30,15 +30,12 @@
     height: 250;
   }
   .trackingNumber2 {
+    padding-top: 70px;
     margin: auto;
     text-align: center;
   }
   .dropdown-menu {
     width: 250px !important;
-  }
-  .description {
-    padding: 15px;
-    text-align: center;
   }
   .ceruleanLogo {
     margin-left: auto;
@@ -48,9 +45,9 @@
   .copyRightDefault {
     color: white;
   }
-  .special_card {
-    background-color: rgba(245, 245, 245, 1);
-    opacity: .6;
+
+  .border_color {
+    border-color: #e59400;
   }
   .text_special {
     color: #2a52be;
