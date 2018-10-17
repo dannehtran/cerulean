@@ -4,12 +4,16 @@
  ?>
 <!-- START OF HOMEPAGE -->
   <img class="ceruleanLogo" src="images/cl_logo.png">
+
   <!-- CERLUEAN SHIPPING JUMBOTRON -->
-  <div class="jumbotron" id="backgroundStory">
-      <h1 class="jumboHeader">Cerulean Shipping</h1>
-      <div class="col-6 text-center align-items-center mx-auto">
-        <p><strong>Cerulean shipping is a mid-sized shipping company that provides services over all terrain such as land, sea, and air. We plan on implementing new technologies that are newer to the shipping industry such as drone shipping and GPS location delivery. This can help put us one step ahead on faster delivery times, and change the shipping industry.</strong></p>
+  <div class="row mx-5 d-flex align-items-stretch" style="padding-top:70px">
+      <div class="card shadow rounded border_color" style="width:100%">
+        <div class="card-body buttonAlign">
+          <h2 class="card-title">Cerulean Shipping</h2>
+          <p class="card-text">Cerulean shipping is a mid-sized shipping company that provides services over all terrain such as land, sea, and air. We plan on implementing new technologies that are newer to the shipping industry such as drone shipping and GPS location delivery. This can help put us one step ahead on faster delivery times, and change the shipping industry.</p>
+        </div>
       </div>
+  </div>
       <div class="col-lg-6 trackingNumber2">
         <form>
           <div class="form-row py-4">
@@ -36,7 +40,7 @@
           <a href="shipping.php" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
         </div>
       </div>
-  </div>
+    </div>
 
     <!-- ROW FOR DRONE, AIR, AND OCEAN CARDS -->
     <div class="row mx-5 py-5">
