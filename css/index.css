@@ -29,6 +29,13 @@
     width: 400;
     height: 250;
   }
+  .image-resize_standard {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 1000;
+    height: 250;
+  }
   .trackingNumber2 {
     padding-top: 70px;
     margin: auto;

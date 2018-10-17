@@ -28,7 +28,7 @@
 
       <!--Standard Shipping Card-->
       <div class="card py-3 border_color" style="width:100%">
-        <img class="card-img-top image-resize" src="images/truck.jpg" alt="truck">
+        <img class="card-img-top image-resize_standard" src="images/truck.jpg" alt="truck">
         <div class="card-body buttonAlign">
           <h4 class="card-title">Standard Shipping</h4>
           <p class="card-text">Cerulean Shipping offers the greatest on land delivery throughout the United States! We ship
