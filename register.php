@@ -146,7 +146,7 @@
          You must agree before submitting.
        </div>
      </div>
-     <button class="btn btn-primary mt-3" type="submit" name="register">Sign Up</button>
+     <button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="submit" name="register">Sign Up</button>
    </div>
  </form>
 </div>
