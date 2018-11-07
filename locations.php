@@ -14,58 +14,45 @@ include "header.php"
 <!--header end -->
 
  <!--contact page content-->
-  <div>
-  		<article>
-  			<header>
-    		<h1>Cerulean Shipping</h1>
-    		<h3>How to Contact Us</h3>
-    		<p>Reach us at any of our main branches.</p>
-        <p>For appropriate and quick service please contact the appropriate branch. </p>
-  			</header>
-
-        <div>
-    			<table class="contactTable">
-            <tr>
+ <div class="align-items-center text-center">
+    <div class="card py-3 border_color billboard2">
+      <img class="card-img-top billboard" src="images/building_front.jpg" alt="Cerulean Logo">
+      <h2 class="pading">How to Reach Us</h2>
+      <p class="txtSize">Send us an email, give us a call, or mail us a letter to recive a prompt risponse.</p>
+        <div class="container">
+          <table class="table table-borderless table-light" align="center">
+            <thead class="thead-cerulean">
+              <tr>
                 <th>Branch Office</th>
                 <th>Email</th>
                 <th>Phone Number</th>
                 <th>Address</th>
-            </tr>
-            <tr>
-              <td>Cerulean Ground</td>
-              <td>cerulean.ground.support@gmail.com</td>
-              <td>1.800.464.1020</td>
-              <td>600 East Brokaw <br> San Jose, CA 95112 USA</td>
-            </tr>
-            <tr>
-              <td>Cerulean Air Mail</td>
-              <td>cerulean.air.support@gmail.com</td>
-              <td>1.800.464.2030</td>
-              <td>6845 South Las Vegas Blvd<br>Las Vegas, NV 89119 USA</td>
-            </tr>
-            <tr>
-              <td>Cerulean Freight</td>
-              <td>cerulean.frieght.support@gmail.com</td>
-              <td>1.800.464.4050</td>
-              <td>12710 Executive Dr.<br>Dallas, TX 75238</td>
-            </tr>
-            <tr>
-              <td>Cerulean Drone</td>
-              <td>cerulean.drone.support@gmail.com</td>
-              <td>1.800.464.6070</td>
-              <td>800 Garden Ave. North<br>Renton, WA 98057</td>
-            </tr>
-            <tr>
-              <td>Cerulean Head Branch</td>
-              <td>cerulean.shipping@gmail.com</td>
-              <td>1.800.580.2334</td>
-              <td>3296 N.W. Commerce Ave.<br>Duluth, GA 30096</td>
-            </tr>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Cerulean HQ</td>
+                <td>cerulean.support@cerulean.com</td>
+                <td>1.800.464.1020</td>
+                <td>600 East Brokaw <br> San Jose, CA 95112 USA</td>
+              </tr>
+            </tbody>
           </table>
-        </div>
-		</article>
+          <div class="col-lg-6 row2"><!--location finder-->
+            <form>
+              <h2 class="">Find a location near you:</h2>
+              <div class="form-row py-4">
+                <div class="col-9">
+                  <input type="text" id="areaCode" name="areaCode" placeholder="Area Code" required="" class="form-control form-control-lg center"</form>
+                </div>
+                  <button class="btn btn-secondary buttonColor" type="Submit">Submit</button>
+              </div>
+            </form>
+          </div><!--location finder end-->
+        </div><!--container class end-->
+    </div> <!--card claass end -->
   </div>
- <!--end of contact page content-->
+ <!--h2>end of contact page content-->
 
 <?php
 include "footer.php"

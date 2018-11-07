@@ -1,15 +1,73 @@
 
-  .contactTable {
-    border: 1px solid black;
+.contactTable th, td{
+    border: 1px ;
     border-collapse: collapse;
+    width: 25%;
+    text-align: center;
+    padding: 20px;
+    font-size: 20px;
+    padding-top: 20px;
+  }
+  .row{
+    position: relative;
+    top:50%;
+    left: 50%
+    margin:auto;
+  }
+  .pading{
+    padding-top: 50px;
+  }
+  .txtSize{
+    font-size: 20px;
+  }
+  .center{
+    text-align: center;
+  }
+  }
+  .buttonColor {
+    background: #2a52be;
   }
 
-  .contactTable th{
-    border: 1px solid black;
-    border-collapse: collapse;
+  .row2{
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin: auto;
+    text-align: center;
   }
 
-  .contactTable td{
-    border: 1px solid black;
-    border-collapse: collapse;
+  .border_color{
+    border-color: #e59400;
+    border-size: 4px;
+    background-color: white;
+  }
+  .building_img{
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .billboard{
+    margin-left:auto;
+    margin-right:auto;
+    display: block;
+    height: 300px;
+    width: 500px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .billboard2{
+    margin-left:auto;
+    margin-right:auto;
+    height: 900px;
+    width: 1100px;
+    margin-bottom: 50px;
+  }
+
+  .thead-cerulean{
+    background-color: #2A52BE;
+    color: white;
+  }
+  .insert1_color {
+    border-color: #e59400;
   }
