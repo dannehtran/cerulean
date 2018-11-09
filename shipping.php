@@ -28,16 +28,18 @@ include "header.php"
         </div>
 
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
-          <div class="card-body">
-            <img src="images/shipments.png" alt="truck" class="shippingImg">
-            <p>Standard Shipping Choice.</p>
-            <p>Features most average delivery times for low prices.</p>
-            <div>
-              <table class="accordionTable">
+          <div class="card-body align-items-center text-center mx-auto">
+            <div class="align-items-center text-center mx-auto">
+              <table class="accordionTable  align-items-center text-center mx-auto">
+                <img src="images/shipments.png" alt="truck" class="shippingImg d-flex">
+                <thead class="thead-cerulean">
+                <h3>Standard Shipping Choice.</h3>
+                <h4>Features most average delivery times for low prices.</h4>
                 <tr>
                   <th>Estimated Delivery Time</th>
                   <th>Delivery Cost</th>
                 </tr>
+              </thead>
                 <tr>
                   <td>5-7 Days</td>
                   <td>$20</td>
@@ -51,8 +53,10 @@ include "header.php"
                   <td>$75</td>
                 </tr>
               </table>
+                <form action="shippingForm.php" class="buttonPadding">
+                  <button class="btn btn-secondary buttonColor" type="Submit" id="groundS">Shipping Form</button>
+                </form>
             </div>
-                <a href="shippingForm.php" class="shippingLink">Shipping Form</a>
           </div>
         </div>
       </div>
@@ -66,16 +70,18 @@ include "header.php"
           </h5>
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
-          <div class="card-body">
-            <img src="images/drone.png" alt="drone" class="shippingImg">
-            <p>Drone Shipping is for quick local deliveries</p>
-            <p>*MAX weight capacity 10lb</p>
-            <div>
-              <table class="accordionTable">
+          <div class="card-body align-items-center text-center mx-auto">
+            <div class="align-items-center text-center mx-auto">
+              <table class="accordionTable  align-items-center text-center mx-auto">
+                <img src="images/drone.png" alt="truck" class="shippingImg d-flex">
+                <thead class="thead-cerulean">
+                <h3>Drone Shipping is for quick local deliveries.</h3>
+                <h4>*MAX weight capacity 10lb</h4>
                 <tr>
                   <th>Estimated Delivery Time</th>
                   <th>Delivery Cost</th>
                 </tr>
+              </thead>
                 <tr>
                   <td>2-3 hours</td>
                   <td>$20</td>
@@ -85,12 +91,14 @@ include "header.php"
                   <td>$40</td>
                 </tr>
                 <tr>
-                  <td>EXPRESS 15-20 minutes</td>
+                  <td>EXPRESS 15-20  minutes</td>
                   <td>$75</td>
                 </tr>
               </table>
+                <form action="shippingForm.php" class="buttonPadding">
+                  <button class="btn btn-secondary buttonColor" type="Submit" id="droneS">Shipping Form</button>
+                </form>
             </div>
-            <a href="shippingForm.php" class="shippingLink">Shipping Form</a>
           </div>
         </div>
       </div>
@@ -103,22 +111,24 @@ include "header.php"
           </h5>
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
-          <div class="card-body">
-            <img src="images/plane.png" alt="plane" class="shippingImg">
-            <p>Quick Air Deliveries</p>
-            <p>*Best method for fast intercontinental pckages. </p>
-            <div>
-              <table class="accordionTable">
+          <div class="card-body align-items-center text-center mx-auto">
+            <div class="align-items-center text-center mx-auto">
+              <table class="accordionTable  align-items-center text-center mx-auto">
+                <img src="images/plane.png" alt="truck" class="shippingImg d-flex">
+                <thead class="thead-cerulean">
+                <h3>Quick Air Deliveries</h3>
+                <h4>*Best method for fast intercontinental pckages.</h4>
                 <tr>
                   <th>Estimated Delivery Time</th>
                   <th>Delivery Cost</th>
                 </tr>
+              </thead>
                 <tr>
                   <td>2 Days</td>
                   <td>$20</td>
                 </tr>
                 <tr>
-                  <td>1 day</td>
+                  <td>1 Day</td>
                   <td>$40</td>
                 </tr>
                 <tr>
@@ -126,8 +136,10 @@ include "header.php"
                   <td>$75</td>
                 </tr>
               </table>
+                <form action="shippingForm.php" class="buttonPadding">
+                  <button class="btn btn-secondary buttonColor" type="Submit" id="airS">Shipping Form</button>
+                </form>
             </div>
-            <a href="shippingForm.php" class="shippingLink">Shipping Form</a>
           </div>
         </div>
       </div>
@@ -141,27 +153,31 @@ include "header.php"
           </h5>
         </div>
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
-          <div class="card-body">
-            <img src="images/ship.png" alt="boat" class="shippingImg">
-            <p>Most optimal for the Largest of packages.</p>
-            <p>*No maximum weight capacity</p>
-            <div>
-              <table class="accordionTable">
+          <div class="card-body align-items-center text-center mx-auto">
+            <div class="align-items-center text-center mx-auto">
+              <table class="accordionTable  align-items-center text-center mx-auto">
+                <img src="images/ship.png" alt="truck" class="shippingImg d-flex">
+                <thead class="thead-cerulean">
+                <h3>Optimal for the Largest of packages.</h3>
+                <h4>*No maximum weight capacity</h4>
                 <tr>
                   <th>Estimated Delivery Time</th>
                   <th>Delivery Cost</th>
                 </tr>
+              </thead>
                 <tr>
-                  <td>1-2 Weeks</td>
+                  <td>1-2 weeks</td>
                   <td>$20</td>
                 </tr>
                 <tr>
-                  <td>1 Week</td>
+                  <td>1 week</td>
                   <td>$40</td>
                 </tr>
               </table>
+                <form action="shippingForm.php" class="buttonPadding">
+                  <button class="btn btn-secondary buttonColor" type="Submit" id="freightS">Shipping Form</button>
+                </form>
             </div>
-            <a href="shippingForm.php" class="shippingLink">Shipping Form</a>
           </div>
         </div>
       </div>
