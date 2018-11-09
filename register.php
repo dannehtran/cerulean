@@ -4,8 +4,8 @@
  ?>
 
  <!-- Sign Up Form -->
- <div class="container signUpForm shadow rounded my-5 px-5">
- <form action="handlers/registerHandler.php" class="needs-validation py-4 px-4" novalidate>
+ <div class="card signUpForm shadow rounded border_color mx-5">
+ <form method="POST" action="handlers/registerHandler.php" class="needs-validation py-4 px-4" novalidate>
    <h1 class="text-center">Sign Up Form</h1>
 
    <!-- Row 1 -->
