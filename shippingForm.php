@@ -17,71 +17,154 @@ include "header.php"
 <!--header end -->
 
 <!--shipping page content-->
-<div class="box">
-  <div class="row">
-    <div class="col-75">
-      <div class="container1">
-        <form action="/action_page.php">
-        
-          <div class="row">
-            <div class="col-50">
-              <h3>Billing/Return Address</h3>
-              <label for="fname"><i class="fa fa-user"></i> Full Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="First Name" required="" class="xyz">
-                <input type="text" id="fname" name="middlename" placeholder="Middle Initial" class="xyz">
-                <input type="text" id="fname" name="lastname" placeholder="Last Name" required="" class="xyz">
-              <label for="phone"><i class="fa fa-phone"></i> Phone Number</label>
-                  <input type="text" id="phone" name="phone" placeholder="888-555-7777">
-              <label for="email"><i class="fa fa-envelope"></i> Email</label>
-                <input type="text" id="email" name="email" placeholder="john@example.com" required="">
-              <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required="">
-              <label for="city"><i class="fa fa-institution"></i> City</label>
-                <input type="text" id="city" name="city" placeholder="New York" required="">
+<!-- Sign Up Form -->
+ <div class="card signUpForm shadow rounded border_color mx-5">
+ <form method="POST" action="handlers/registerHandler.php" class="needs-validation py-4 px-4" novalidate>
+   <h1 class="text-center">Sign Up Form</h1>
 
-              <div class="row">
-                <div class="col-50">
-                  <label for="state">State</label>
-                  <input type="text" id="state" name="state" placeholder="NY" required="">
-                </div>
-                <div class="col-50">
-                  <label for="zip">Zip</label>
-                  <input type="text" id="zip" name="zip" placeholder="10001" required="">
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-75">
-                  <h3>Package Details</h3>
-                  <div class="col-50">
-                <label for="package">Package Type</label>
-                  <select required="">
-                    <option value="Owners">Your Own</option>
-                    <option value="csLarge">Cerulean-Large</option>
-                    <option value="csMedium">Cerulean-Medium</option>
-                    <option value="csSmall">Cerulean-Small</option>
-                    <option value="csLetter">Cerulean-Letter</option>
-                    <option value="csTube">Cerulean-Tube</option>
-                  </select>
-                <label for="packageweight">Package Weight</label>
-                <input type="text" id="weight" name="weight" placeholder="Weight in lbs" required="" class="xyz">
-                  </div>
-                <div class="col-50">
-                  <label for="ownersDM">Demensions of Your Own Package</label>
-                  <input type="text" name="OwnersLength" placeholder="Length" class="xyz">
-                  <input type="text" name="OwnersWidth" placeholder="Width" class="xyz">
-                  <input type="text" name="OwnersHeight" placeholder="Height" class="xyz">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-          
-          <input type="submit" class="shippingLink" value="Continue to Delivery Address" onclick="window.location='shippingForm2.php';">
-        </form>
-      </div><!--Container1 class-->
-    </div><!--Col-75 class-->
-  </div><!--row class-->
-</div><!--Box class-->
+   <!-- Row 1 -->
+   <div class="form-row justify-content-center">
+
+     <!-- Username Input Field -->
+     <div class="col-md-5 mb-3">
+       <label for="validationCustom01">Username</label>
+       <input type="text" class="form-control" name="username_reg" id="validationCustom01" placeholder="Username" required>
+       <div class="invalid-feedback">
+         Please enter a username.
+       </div>
+     </div>
+
+     <!-- Password Input Field -->
+     <div class="col-md-5 mb-3">
+       <label for="validationCustom02">Password</label>
+       <input type="password" class="form-control" name="password_reg" id="validationCustom02" placeholder="Password" required>
+       <div class="invalid-feedback">
+         Please enter a password.
+       </div>
+     </div>
+   </div>
+
+   <!-- Row 2 -->
+   <div class="form-row justify-content-center">
+
+     <!-- Email Input Field -->
+     <div class="col-md-5 mb-3">
+       <label for="validationCustom03">Email</label>
+       <input type="text" class="form-control" name="email_reg" id="validationCustom03" placeholder="Email" required>
+       <div class="invalid-feedback">
+         Please enter your email address.
+       </div>
+     </div>
+
+     <!-- Confirm Password Input Field -->
+     <div class="col-md-5 mb-3">
+       <label for="validationCustom04">Re-type password</label>
+       <input type="password" class="form-control" name="password2_reg" id="validationCustom04" placeholder="Confirm Password" required>
+       <div class="invalid-feedback">
+         Please enter your password again.
+       </div>
+     </div>
+   </div>
+
+   <!-- Row 3 -->
+   <div class="form-row justify-content-center">
+
+     <!-- First name Input Field -->
+     <div class="col-md-5 mb-3">
+       <label for="validationCustom05">First name</label>
+       <input type="text" class="form-control" name="first_name_reg" id="validationCustom05" placeholder="First name" required>
+       <div class="invalid-feedback">
+         Please enter your first name.
+       </div>
+     </div>
+
+     <!-- Lastname Input Field -->
+     <div class="col-md-5 mb-3">
+       <label for="validationCustom06">Last name</label>
+       <input type="text" class="form-control" name="last_name_reg" id="validationCustom06" placeholder="Last name" required>
+       <div class="invalid-feedback">
+         Please enter your last name.
+       </div>
+     </div>
+   </div>
+
+   <!-- Row 4 -->
+   <div class="form-row justify-content-center">
+
+     <!-- Address Input Field -->
+     <div class="col-md-6 mb-3">
+       <label for="validationCustom07">Address</label>
+       <input type="text" class="form-control" name="address_reg" id="validationCustom07" placeholder="Address" required>
+       <div class="invalid-feedback">
+         Please provide a valid address.
+       </div>
+     </div>
+
+     <!-- Address 2 Input Field -->
+     <div class="col-md-4 mb-3">
+       <label for="validationCustom08">Address 2 (Optional)</label>
+       <input type="text" class="form-control" name="address2_reg" id="validationCustom08" placeholder="Address">
+     </div>
+   </div>
+
+   <!-- Row 5 -->
+   <div class="form-row justify-content-center">
+     <div class="col-md-6 mb-3">
+
+       <!-- City Input Field -->
+       <label for="validationCustom09">City</label>
+       <input type="text" class="form-control" name="city_reg" id="validationCustom09" placeholder="City" required>
+       <div class="invalid-feedback">
+         Please provide a valid city.
+       </div>
+     </div>
+
+     <!-- State Input Field -->
+     <div class="col-md-4 mb-3">
+       <label for="validationCustom10">State</label>
+       <input type="text" class="form-control" name="state_reg" id="validationCustom10" placeholder="State" required>
+       <div class="invalid-feedback">
+         Please provide a valid state.
+       </div>
+     </div>
+   </div>
+
+   <!-- Row 6 -->
+   <div class="form-row justify-content-center">
+
+     <!-- Phone number Input Field -->
+     <div class="col-md-5 mb-3">
+       <label for="validationCustom11">Phone Number</label>
+       <input type="text" class="form-control" name="phone_reg" id="validationCustom11" placeholder="Phone Number" required>
+       <div class="invalid-feedback">
+         Please provide a valid phone number.
+       </div>
+     </div>
+
+     <!-- Zipcode Input Field -->
+     <div class="col-md-5 mb-3">
+       <label for="validationCustom12">Zip</label>
+       <input type="text" class="form-control" name="zip_reg" id="validationCustom12" placeholder="Zip" required>
+       <div class="invalid-feedback">
+         Please provide a valid zip.
+       </div>
+     </div>
+   </div>
+   <div class="form-group text-center">
+     <div class="form-check">
+       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+       <label class="form-check-label" for="invalidCheck">
+         Agree to terms and conditions
+       </label>
+       <div class="invalid-feedback">
+         You must agree before submitting.
+       </div>
+     </div>
+     <button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="submit" name="register">Sign Up</button>
+   </div>
+ </form>
+</div>
+
 <!--end of shipping page content-->
 
 <!--Footer-->
