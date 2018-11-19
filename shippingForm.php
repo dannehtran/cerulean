@@ -5,7 +5,7 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
   <link rel="stylesheet" type="text/css" href="css/index.css">
-  <link rel="stylesheet" type="text/css" href="css/shippingForm.css">
+  <link rel="stylesheet" type="text/css" href="">
   
   <title>SHIPPING</title>
 </head>
@@ -18,153 +18,103 @@ include "header.php"
 
 <!--shipping page content-->
 <!-- Sign Up Form -->
- <div class="card signUpForm shadow rounded border_color mx-5">
- <form method="POST" action="handlers/registerHandler.php" class="needs-validation py-4 px-4" novalidate>
-   <h1 class="text-center">Sign Up Form</h1>
+ <div class="card shadow rounded border_color mx-5">
+ <form method="" action="" class=" py-4 px-4">
+   <h1 class="text-center">Shipping Form</h1>
+   <h4 class="text-center">Billing/Return Address</h4>
 
-   <!-- Row 1 -->
    <div class="form-row justify-content-center">
-
-     <!-- Username Input Field -->
-     <div class="col-md-5 mb-3">
-       <label for="validationCustom01">Username</label>
-       <input type="text" class="form-control" name="username_reg" id="validationCustom01" placeholder="Username" required>
-       <div class="invalid-feedback">
-         Please enter a username.
-       </div>
+     <div class="col-md-3 mb-3">
+       <label>First Name</label>
+       <input type="text" class="form-control" name="firstnameBilling" id="firstnameReturn" placeholder="John" required>
      </div>
 
-     <!-- Password Input Field -->
-     <div class="col-md-5 mb-3">
-       <label for="validationCustom02">Password</label>
-       <input type="password" class="form-control" name="password_reg" id="validationCustom02" placeholder="Password" required>
-       <div class="invalid-feedback">
-         Please enter a password.
-       </div>
+     <div class="col-md-3 mb-3">
+       <label>Last Name</label>
+       <input type="txt" class="form-control" name="LastnameBilling" id="lastnameReturn" placeholder="Doe" required>
      </div>
    </div>
 
-   <!-- Row 2 -->
    <div class="form-row justify-content-center">
-
-     <!-- Email Input Field -->
-     <div class="col-md-5 mb-3">
-       <label for="validationCustom03">Email</label>
-       <input type="text" class="form-control" name="email_reg" id="validationCustom03" placeholder="Email" required>
-       <div class="invalid-feedback">
-         Please enter your email address.
-       </div>
-     </div>
-
-     <!-- Confirm Password Input Field -->
-     <div class="col-md-5 mb-3">
-       <label for="validationCustom04">Re-type password</label>
-       <input type="password" class="form-control" name="password2_reg" id="validationCustom04" placeholder="Confirm Password" required>
-       <div class="invalid-feedback">
-         Please enter your password again.
-       </div>
-     </div>
-   </div>
-
-   <!-- Row 3 -->
-   <div class="form-row justify-content-center">
-
-     <!-- First name Input Field -->
-     <div class="col-md-5 mb-3">
-       <label for="validationCustom05">First name</label>
-       <input type="text" class="form-control" name="first_name_reg" id="validationCustom05" placeholder="First name" required>
-       <div class="invalid-feedback">
-         Please enter your first name.
-       </div>
-     </div>
-
-     <!-- Lastname Input Field -->
-     <div class="col-md-5 mb-3">
-       <label for="validationCustom06">Last name</label>
-       <input type="text" class="form-control" name="last_name_reg" id="validationCustom06" placeholder="Last name" required>
-       <div class="invalid-feedback">
-         Please enter your last name.
-       </div>
-     </div>
-   </div>
-
-   <!-- Row 4 -->
-   <div class="form-row justify-content-center">
-
-     <!-- Address Input Field -->
-     <div class="col-md-6 mb-3">
-       <label for="validationCustom07">Address</label>
-       <input type="text" class="form-control" name="address_reg" id="validationCustom07" placeholder="Address" required>
-       <div class="invalid-feedback">
-         Please provide a valid address.
-       </div>
-     </div>
-
-     <!-- Address 2 Input Field -->
      <div class="col-md-4 mb-3">
-       <label for="validationCustom08">Address 2 (Optional)</label>
-       <input type="text" class="form-control" name="address2_reg" id="validationCustom08" placeholder="Address">
+       <label>Email</label>
+       <input type="text" class="form-control" name="emailBilling" id="emailReturn" placeholder="john.doe@cerulean.com" required>
+     </div>
+     <div class="col-md-2 mb-3">
+       <label>Phone Number</label>
+       <input type="phone" class="form-control" name="phoneBilling" id="phoneReturn" placeholder="888-555-7777" required>
      </div>
    </div>
 
-   <!-- Row 5 -->
    <div class="form-row justify-content-center">
      <div class="col-md-6 mb-3">
-
-       <!-- City Input Field -->
-       <label for="validationCustom09">City</label>
-       <input type="text" class="form-control" name="city_reg" id="validationCustom09" placeholder="City" required>
-       <div class="invalid-feedback">
-         Please provide a valid city.
-       </div>
+       <label>Address</label>
+       <input type="text" class="form-control" name="addressBilling" id="addressReturn" placeholder="Address" required>
      </div>
-
-     <!-- State Input Field -->
-     <div class="col-md-4 mb-3">
-       <label for="validationCustom10">State</label>
-       <input type="text" class="form-control" name="state_reg" id="validationCustom10" placeholder="State" required>
-       <div class="invalid-feedback">
-         Please provide a valid state.
-       </div>
-     </div>
-   </div>
-
-   <!-- Row 6 -->
+    </div>
+  <div class="form-row justify-content-center">
+    <div class="col-md-6 mb-3">
+      <label>Address 2 (Optional)</label>
+      <input type="text" class="form-control" name="address2Billing" id="address2Return" placeholder="Address">
+    </div>
+  </div>
    <div class="form-row justify-content-center">
-
-     <!-- Phone number Input Field -->
-     <div class="col-md-5 mb-3">
-       <label for="validationCustom11">Phone Number</label>
-       <input type="text" class="form-control" name="phone_reg" id="validationCustom11" placeholder="Phone Number" required>
-       <div class="invalid-feedback">
-         Please provide a valid phone number.
-       </div>
+     <div class="col-md-2 mb-3">
+       <label>City</label>
+       <input type="text" class="form-control" name="cityBilling" id="cityReturn" placeholder="City" required>
      </div>
-
-     <!-- Zipcode Input Field -->
-     <div class="col-md-5 mb-3">
-       <label for="validationCustom12">Zip</label>
-       <input type="text" class="form-control" name="zip_reg" id="validationCustom12" placeholder="Zip" required>
-       <div class="invalid-feedback">
-         Please provide a valid zip.
-       </div>
+     <div class="col-md-3 mb-3">
+       <label>State</label>
+       <input type="text" class="form-control" name="stateBilling" id="stateReturn" placeholder="State" required>
+     </div>
+     <div class="col-md-1 mb-3">
+       <label>Zip</label>
+       <input type="text" class="form-control" name="zipBilling" id="zipReturn" placeholder="Zip" required>
      </div>
    </div>
+
+    <h4 class="text-center mb-3">Package Details</h4>
+    <div class="form-row justify-content-center">
+      <div class="col-md-3 mb-3">
+        <label>Package Type</label>
+        <select class="form-control" required="">
+          <option value="Owners">Your Own</option>
+          <option value="csLarge">Cerulean-Large</option>
+          <option value="csMedium">Cerulean-Medium</option>
+          <option value="csSmall">Cerulean-Small</option>
+          <option value="csLetter">Cerulean-Letter</option>
+          <option value="csTube">Cerulean-Tube</option>
+        </select>
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <label>Package Weight </label>
+        <input type="text" class="form-control" id="weight" name="weight" placeholder="Weight in lbs" required="" class="xyz">
+      </div>
+    </div>
+    <div class="form-row justify-content-center">
+      <label>Package Dimensions</label>
+    </div>
+    <div class="form-row justify-content-center">
+      <div class="col-md-2 mb-3">
+            <input class="form-control" type="text" name="OwnersLength" placeholder="Length" class="xyz">
+      </div>
+      <div class="col-md-2 mb-3">
+            <input class="form-control" type="text" name="OwnersWidth" placeholder="Width" class="xyz">
+      </div>
+      <div class="col-md-2 mb-3">
+            <input class="form-control" type="text" name="OwnersHeight" placeholder="Height" class="xyz">
+      </div>
+    </div>
+
+
+
+
    <div class="form-group text-center">
-     <div class="form-check">
-       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-       <label class="form-check-label" for="invalidCheck">
-         Agree to terms and conditions
-       </label>
-       <div class="invalid-feedback">
-         You must agree before submitting.
-       </div>
-     </div>
-     <button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="submit" name="register">Sign Up</button>
+     <button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="" name="ShForm2" onclick="window.location='shippingForm2.php';">Continue</button>
    </div>
  </form>
-</div>
-
+</div> <!--CARD END-->
 <!--end of shipping page content-->
 
 <!--Footer-->
