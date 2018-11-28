@@ -2,10 +2,56 @@
 <?php
   include "header.php";
  ?>
+
+<!-- Handles alert messages -->
+<?php
+
+  // Displays an alert if the user did not input a username or password
+  if (@$_GET['error'] == 'noUnameOrPwd') {
+   echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+           <strong>You did not enter a Username or Password! Please Fill In Everything.</strong>
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>';
+  }
+
+  // Displays an alert if the user did not type in the right password
+  if (@$_GET['error'] == 'wrongpwd') {
+   echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+           <strong>You have entered the wrong password! Please verify you are using the correct credentials.</strong>
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>';
+  }
+
+  //Displays an alert if the user successfully logged in
+  if (@$_GET['login'] == 'success') {
+   echo '<div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+           <strong>Welcome Back! ',$_SESSION["f_name"], ' </strong>
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>';
+  }
+
+  //Displays an alert if the user successfully created an account
+  if (@$_GET['register'] == 'success') {
+   echo '<div class="alert alert-success alert-dismissible fade show text-center" role="alert">
+           <strong>Your account has been successfully created!</strong>
+           Please login via the navigation bar.
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>';
+  }
+ ?>
+
 <!-- START OF HOMEPAGE -->
   <img class="ceruleanLogo" src="images/cl_logo.png">
 
-  <!-- CERLUEAN SHIPPING JUMBOTRON -->
+  <!-- CERLUEAN SHIPPING CARD -->
   <div class="row mx-5 d-flex align-items-stretch" style="padding-top:70px">
       <div class="card shadow rounded border_color" style="width:100%">
         <div class="card-body buttonAlign">
@@ -24,7 +70,6 @@
           </div>
         </form>
       </div>
-  </div>
 
   <!-- Card Containers -->
   <div class="container-fluid">
@@ -37,7 +82,7 @@
           <h4 class="card-title">Standard Shipping</h4>
           <p class="card-text">Cerulean Shipping offers the greatest on land delivery throughout the United States! We ship
                           everywhere across the nation with flat fees and no hidden charges. Click below to learn more!</p>
-          <a href="shipping.php" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
+          <a href="shipping.php#GroundShipping" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
         </div>
       </div>
     </div>
@@ -48,11 +93,11 @@
       <!-- Drone Shipping Card -->
       <div class="col-4 d-flex align-items-stretch">
         <div class="card mx-auto shadow rounded border_color" style="width:400px">
-          <img class="card-img-top image-resize" src="images/drone_shipp.PNG" alt="drone">
+          <img class="card-img-top image-resize" src="images/drone.PNG" alt="drone">
           <div class="card-body buttonAlign">
             <h4 class="card-title">Drone Shipping</h4>
             <p class="card-text">Drone delivery is our newest shipping technology. We carry out your standard shipment with drones built with GPS tracking and accurate location services. Depending on your package weight, your delivery can be made within a few hours after your order/label has been placed in our newest branch office.</p>
-            <a href="shipping.php" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
+            <a href="shipping.php#DroneShipping" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
           </div>
         </div>
       </div>
@@ -64,7 +109,7 @@
           <div class="card-body buttonAlign">
             <h4 class="card-title">Air Freight Shipping</h4>
             <p class="card-text">Want your package delivered within 1 - 2 days? Have your package shipped overnight using our private planes dedicated to delivering your pacakage on time! We offer competitive prices and flat rates, while ensuring safety and accuracy!</p>
-            <a href="shipping.php" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
+            <a href="shipping.php#AirFreight" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
           </div>
         </div>
       </div>
@@ -76,7 +121,7 @@
           <div class="card-body buttonAlign">
             <h4 class="card-title">Ocean Freight Shipping</h4>
             <p class="card-text">Why not deliver your package via boat? With Cerulean shipping, we deliver packages with our custom speedboats! Boat delivery is only available in Hawaii as of now, but we will be expanding this service in the near future!</p>
-            <a href="shipping.php" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
+            <a href="shipping.php#OceanFreight" class="btn btn-secondary btn-rounded buttonColor" role="button">Learn More</a>
           </div>
         </div>
       </div>

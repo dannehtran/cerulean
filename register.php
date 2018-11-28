@@ -2,6 +2,26 @@
 <?php
   include_once "header.php";
  ?>
+<?php
+if (@$_GET['error'] == 'PasswordsDoNotMatch') {
+ echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+         <strong>You did not enter the correct password twice!</strong>
+         Try again.
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>';
+}
+if (@$_GET['error'] == 'UsernameOrEmailAlreadyTaken') {
+ echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+         <strong>The Username or Email you have entered is already taken!</strong>
+         Please choose another Username or Email address.
+         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+           <span aria-hidden="true">&times;</span>
+         </button>
+       </div>';
+}
+ ?>
 
  <!-- Sign Up Form -->
  <div class="card signUpForm shadow rounded border_color mx-5">
@@ -89,7 +109,7 @@
      <!-- Address 2 Input Field -->
      <div class="col-md-4 mb-3">
        <label for="validationCustom08">Address 2 (Optional)</label>
-       <input type="text" class="form-control" name="address2_reg" id="validationCustom08" placeholder="Address">
+       <input type="text" class="form-control" name="address2_reg" id="validationCustom08" placeholder="Address2">
      </div>
    </div>
 
@@ -146,7 +166,7 @@
          You must agree before submitting.
        </div>
      </div>
-     <button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="submit" name="register">Sign Up</button>
+     <button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="submit" action="handlers/registerHandler.php" name="register">Sign Up</button>
    </div>
  </form>
 </div>
