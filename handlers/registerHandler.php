@@ -1,79 +1,79 @@
 <?php
-if (isset($_POST['register'])) {
 
-  require 'db_connect.php';
+// Checks if user presses the register button
+if (isset($_POST["register"])) {
 
-  $username = $_POST['username_reg'];
-  $mail = $_POST['mail_reg'];
-  $password = $_POST['password_reg'];
-  $password2= $_POST['password2_reg'];
-  $address = $_POST['address_reg'];
-  $address2 = $_POST['address2_reg'];
-  $zipcode = $_POST['zip_reg'];
-  $state = $_POST['state_reg'];
-  $phone = $_POST['phone_reg'];
-  $firstname = $_POST['first_name_reg'];
-  $lastname = $_POST['last_name_reg'];
+  require '../db_connect.php';
 
-  if (empty($username) || empty($mail) || empty($password) || empty($password2)
-      || empty($address) || empty($zipcode) || empty($state) || empty($phone)
-      || empty($firstname) || empty($lastname) ) {
-    header("Location: ../register.php?error=emptyfields&uname=" . $username . "&mail=" . $mail . "&address=" . $address .
-    "&zip=" . $zipcode . "&state" . $state . "&phone=" . $phone . "&=fname" . $firstname . "&lname=" . $lastname);
-    exit();
-  }
-  else if (!filter_var($mail, FILTER_VALIDATE_EMAIL) && !preg_match("/^[a-zA-Z0-9]*$/", $username))  {
-    header("Location: ../register.php?error=invalidUsername&address=" . $address .
-    "&zip=" . $zipcode . "&state" . $state . "&phone=" . $phone . "&=fname" . $firstname . "&lname=" . $lastname);
-    exit();
-  }
-  else if (!filter_var($mail, FILTER_VALIDATE_EMAIL)) {
-    header("Location: ../register.php?error=invalidEmail&uname=" . $username . "&address=" . $address .
-    "&zip=" . $zipcode . "&state" . $state . "&phone=" . $phone . "&=fname" . $firstname . "&lname=" . $lastname);
-    exit();
-  }
-  else if (!preg_match("/^[a-zA-Z0-9]*$/", $username)) {
-    header("Location: ../register.php?error=invalidUsername&mail=" . $mail . "&address=" . $address .
-    "&zip=" . $zipcode . "&state" . $state . "&phone=" . $phone . "&=fname" . $firstname . "&lname=" . $lastname);
-    exit();
-  }
-  else if ($password !== $password2) {
-    header("Location: ../register.php?error=passwordCheck&uname=" . $username . "&mail=" . $mail . "&address=" . $address .
-    "&zip=" . $zipcode . "&state" . $state . "&phone=" . $phone . "&=fname" . $firstname . "&lname=" . $lastname);
-    exit();
-  }
+  // Sets POST variables to easy to understand variables
+  $username = $_POST["username_reg"];
+  $password = $_POST["password_reg"];
+  $password2 = $_POST["password2_reg"];
+  $email = $_POST["email_reg"];
+  $firstname = $_POST["first_name_reg"];
+  $lastname = $_POST["last_name_reg"];
+  $address = $_POST["address_reg"];
+  $address2 = $_POST["address2_reg"];
+  $city = $_POST["city_reg"];
+  $state = $_POST["state_reg"];
+  $phone = $_POST["phone_reg"];
+  $zipcode = $_POST["zip_reg"];
 
-  $sql = "SELECT username FROM customers WHERE username=?";
+  // Preparing a query to check if there is a username already in the database
+  $sql = 'SELECT * FROM customers WHERE username=? OR email=?';
   $stmt = mysqli_stmt_init($connection);
+
+  if ($password !== $password2) {
+  // Checks if user inputted false password and redirects them back to index page
+    header("Location: ../register.php?error=PasswordsDoNotMatch");
+    exit();
+  }
+
+  // If the password matches, hash the password so it can be inputted into the database
+  else {
+    $hashedpassword = password_hash($password, PASSWORD_DEFAULT);
+  }
+
+  // If the query is wrong, return them to register page with an error
   if (!mysqli_stmt_prepare($stmt, $sql)) {
     header("Location: ../register.php?error=sqlError");
     exit();
   }
+
+  // If the query is prepared properly, bind the parameters
   else {
-    mysqli_stmt_bind_param($stmt, "s", $username);
+    mysqli_stmt_bind_param($stmt, "ss", $username, $email);
     mysqli_stmt_execute($stmt);
-    mysqli_stmt_store_result($stmt);
-    $resultCheck = mysqli_stmt_num_rows($stmt);
-    if ($resultCheck > 0) {
-      header("Location: ../register.php?error=unameTaken&mail=" . $mail . "&address=" . $address .
-      "&zip=" . $zipcode . "&state" . $state . "&phone=" . $phone . "&=fname" . $firstname . "&lname=" . $lastname);
+    $result = mysqli_stmt_get_result($stmt);
+
+    // Checks if there's something in the row from the query
+    if ($row = mysqli_fetch_assoc($result)) {
+      header("Location: ../register.php?error=UsernameOrEmailAlreadyTaken");
       exit();
     }
+
+    // If there is nothing in the query, start inserting user information into the database
     else {
-      $sql = "INSERT INTO customers (username, password, firstname, lastname, email, address, address2, city, state, zipcode, phone) " . "VALUES ($username, $password, $firstname, $lastname, $mail, $address, $address2, $city, $state, $zipcode, $phone)";
-      $stmt = mysqli_stmt_init($connection);
-      if (!mysqli_stmt_prepare($stmt, $sql)) {
-        header("Location: ../register.php?error=sqlError");
-        exit();
-      }
-      else {
-        $hashedpassword = password_hash($password, PASSWORD_DEFAULT)
-        mysqli_stmt_bind_param($stmt, "sssssssssss", $username, $hashedpassword, $firstname, $lastname, $mail, $address, $address2, $city, $state, $zipcode, $phone);
-        mysqli_stmt_execute($stmt);
-        header("Location: ../register.php?register=success");
-        exit();
-      }
+      $sql = 'INSERT INTO customers (username, password, firstname, lastname, email, address,
+        address2, city, state, zipcode, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      ';
+
+      // Checks to see if the INSERT SQL query is prepared properly
+       if (!mysqli_stmt_prepare($stmt, $sql)) {
+         header("Location: ../register.php?error=sqlError");
+         exit();
+       }
+
+       // If the query is prepared properly, bind and execute the insert SQL query to the database
+       else {
+         mysqli_stmt_bind_param($stmt, "sssssssssss", $username, $hashedpassword, $firstname, $lastname,$email, $address, $address2,
+         $city, $state, $zipcode, $phone);
+         mysqli_stmt_execute($stmt);
+         $result = mysqli_stmt_get_result($stmt);
+         header('Location: ../index.php?register=success');
+       }
     }
   }
+
 }
  ?>

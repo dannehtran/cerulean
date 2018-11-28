@@ -11,7 +11,7 @@ if(isset($_POST["login"])) {
 
   // Checks if user_mail and password is empty, return them to index page with error message
   if (empty($user_mail) || empty($password)) {
-    header("Location: ../index.php?error=noUsernameOrPassword");
+    header("Location: ../index.php?error=noUnameOrPwd");
     exit();
   }
 
@@ -20,13 +20,13 @@ if(isset($_POST["login"])) {
     $sql = 'SELECT * FROM customers WHERE username=? OR email=?';
     $stmt = mysqli_stmt_init($connection);
 
-    // Checks if the database doesn't have a username or email the user inputted, return them to the index page with an error message
+    // Checks to see if the SQL query is properly prepared
     if (!mysqli_stmt_prepare($stmt, $sql)) {
       header("Location: ../index.php?error=sqlError");
       exit();
     }
 
-    // Binds the username and email and get result
+    // Binds the username and email and execute the prepared query
     else {
       mysqli_stmt_bind_param($stmt, "ss", $user_mail, $user_mail);
       mysqli_stmt_execute($stmt);
@@ -46,10 +46,9 @@ if(isset($_POST["login"])) {
 
         // Checks if the password matches and creates session variables
         else if ($pwdCheck == true) {
-          session_start();
           $_SESSION['u_name'] = $row['username'];
           $_SESSION['f_name'] = $row['firstname'];
-          header("Location: ../index.php?success=login");
+          header("Location: ../index.php?login=success");
           exit();
         }
 
