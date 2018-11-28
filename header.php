@@ -14,6 +14,7 @@
   <meta charset="UTF-8">
   <meta name="description" content="We are a shipping company that provide services throughout the United States.">
   <meta name="keywords" content="Cerulean, Shipping, Tracking, Drones">
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
@@ -42,9 +43,6 @@
               <input type="tracking" class="form-control form-control-lg" id="trackingNumber1" placeholder="Tracking ID">
               <button type="submit" class="btn btn-secondary btn-block btn-lg buttonColor">Track</button>
             </form>
-            <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">More Tracking Information</a>
-            </div>
           </li>
         <li class="nav-item">
           <a class="nav-link" id="contactUsNav" role="button" href="locations.php">Locations</a>
