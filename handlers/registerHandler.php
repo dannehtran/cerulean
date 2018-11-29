@@ -20,7 +20,7 @@ if (isset($_POST["register"])) {
   $zipcode = $_POST["zip_reg"];
 
   // Preparing a query to check if there is a username already in the database
-  $sql = 'SELECT * FROM customers WHERE username=? OR email=?';
+  $sql = 'SELECT * FROM customer WHERE username=? OR email=?';
   $stmt = mysqli_stmt_init($connection);
 
   if ($password !== $password2) {
@@ -54,8 +54,8 @@ if (isset($_POST["register"])) {
 
     // If there is nothing in the query, start inserting user information into the database
     else {
-      $sql = 'INSERT INTO customers (username, password, firstname, lastname, email, address,
-        address2, city, state, zipcode, phone) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+      $sql = 'INSERT INTO customer (first_name, last_name, username, password, email, address,
+        address2, city, state, phone_number, zipcode) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
       ';
 
       // Checks to see if the INSERT SQL query is prepared properly
@@ -66,8 +66,8 @@ if (isset($_POST["register"])) {
 
        // If the query is prepared properly, bind and execute the insert SQL query to the database
        else {
-         mysqli_stmt_bind_param($stmt, "sssssssssss", $username, $hashedpassword, $firstname, $lastname,$email, $address, $address2,
-         $city, $state, $zipcode, $phone);
+         mysqli_stmt_bind_param($stmt, "sssssssssss", $firstname, $lastname, $username, $hashedpassword,$email, $address, $address2,
+         $city, $state, $phone, $zipcode);
          mysqli_stmt_execute($stmt);
          $result = mysqli_stmt_get_result($stmt);
          header('Location: ../index.php?register=success');

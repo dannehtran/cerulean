@@ -17,7 +17,7 @@ if(isset($_POST["login"])) {
 
   // Prepares sql statement and start connection to database
   else {
-    $sql = 'SELECT * FROM customers WHERE username=? OR email=?';
+    $sql = 'SELECT * FROM customer WHERE username=? OR email=?';
     $stmt = mysqli_stmt_init($connection);
 
     // Checks to see if the SQL query is properly prepared
@@ -47,7 +47,7 @@ if(isset($_POST["login"])) {
         // Checks if the password matches and creates session variables
         else if ($pwdCheck == true) {
           $_SESSION['u_name'] = $row['username'];
-          $_SESSION['f_name'] = $row['firstname'];
+          $_SESSION['f_name'] = $row['first_name'];
           header("Location: ../index.php?login=success");
           exit();
         }
