@@ -9,7 +9,8 @@
   // Displays an alert if the user did not input a username or password
   if (@$_GET['error'] == 'noUnameOrPwd') {
    echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-           <strong>You did not enter a Username or Password! Please Fill In Everything.</strong>
+           <strong>You did not enter a Username or Password!</strong>
+           Please fill in everything.
            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
              <span aria-hidden="true">&times;</span>
            </button>
@@ -19,7 +20,8 @@
   // Displays an alert if the user did not type in the right password
   if (@$_GET['error'] == 'wrongpwd') {
    echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
-           <strong>You have entered the wrong password! Please verify you are using the correct credentials.</strong>
+           <strong>You have entered the wrong password!</strong>
+            Please verify you are using the correct credentials.
            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
              <span aria-hidden="true">&times;</span>
            </button>
