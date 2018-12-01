@@ -63,6 +63,10 @@
   .image_header {
     padding-top: 130px;
   }
+  .thead-cerulean {
+    background-color: #2A52BE;
+    color: white; 
+  }
   body {
     padding-top: 100px;
     background-color: #e9ecef;
