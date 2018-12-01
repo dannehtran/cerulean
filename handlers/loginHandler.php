@@ -2,7 +2,7 @@
 session_start();
 
 // Checks if user presses login button
-if(isset($_POST["login"])) {
+if(isset($_POST['login'])) {
 
   // Connects to the database using db_connect.php and sets the POST variables
   require '../db_connect.php';
@@ -48,6 +48,7 @@ if(isset($_POST["login"])) {
         else if ($pwdCheck == true) {
           $_SESSION['u_name'] = $row['username'];
           $_SESSION['f_name'] = $row['first_name'];
+          $_SESSION['c_id'] = $row['c_id'];
           header("Location: ../index.php?login=success");
           exit();
         }

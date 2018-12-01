@@ -1,23 +1,23 @@
 <?php
 
 // Checks if user presses the register button
-if (isset($_POST["register"])) {
+if (isset($_POST['register'])) {
 
   require '../db_connect.php';
 
   // Sets POST variables to easy to understand variables
-  $username = $_POST["username_reg"];
-  $password = $_POST["password_reg"];
-  $password2 = $_POST["password2_reg"];
-  $email = $_POST["email_reg"];
-  $firstname = $_POST["first_name_reg"];
-  $lastname = $_POST["last_name_reg"];
-  $address = $_POST["address_reg"];
-  $address2 = $_POST["address2_reg"];
-  $city = $_POST["city_reg"];
-  $state = $_POST["state_reg"];
-  $phone = $_POST["phone_reg"];
-  $zipcode = $_POST["zip_reg"];
+  $username = $_POST['username_reg'];
+  $password = $_POST['password_reg'];
+  $password2 = $_POST['password2_reg'];
+  $email = $_POST['email_reg'];
+  $firstname = $_POST['first_name_reg'];
+  $lastname = $_POST['last_name_reg'];
+  $address = $_POST['address_reg'];
+  $address2 = $_POST['address2_reg'];
+  $city = $_POST['city_reg'];
+  $state = $_POST['state_reg'];
+  $phone = $_POST['phone_reg'];
+  $zipcode = $_POST['zip_reg'];
 
   // Preparing a query to check if there is a username already in the database
   $sql = 'SELECT * FROM customer WHERE username=? OR email=?';
