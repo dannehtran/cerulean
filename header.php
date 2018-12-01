@@ -56,7 +56,7 @@
                 Welcome, ', $_SESSION['f_name'], '
               </a>';
               echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
-              echo '<a class="dropdown-item" href="#">My Tracking Numbers</a>';
+              echo '<a class="dropdown-item" href="tracking.php">My Tracking Numbers</a>';
               echo '<a class="dropdown-item" href="#">My Purchase History</a>';
               echo '<div class="dropdown-divider"></div>';
               echo '<form action="handlers/logoutHandler.php" method="POST"><button class="btn btn-secondary btn-block buttonColor" type="submit" name="logout" action="handlers/logoutHandler.php" method="POST">Logout</button></form></div>';
