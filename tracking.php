@@ -2,6 +2,7 @@
 <?php
   include "header.php";
  ?>
+ 
 <!-- START OF TRACKING PAGE-->
 
 <!-- TRACKING TABLE -->
@@ -20,7 +21,8 @@
                 <th>Delivered</th>
               </tr>
               <tbody>
-                <!-- PHP code to pull data tracking information from the database -->
+
+                <!-- PHP code to pull tracking information from the database -->
                 <?php
                 require 'db_connect.php';
 
@@ -59,6 +61,8 @@
                   }
                 }
                 ?>
+                <!-- END OF PHP CODE -->
+
               </tbody>
           </table>
       </div>

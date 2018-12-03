@@ -5,9 +5,9 @@
 $db_local = "localhost";
 $db_local_username = "root";
 $db_local_password = "root";
-$db_host = "ceruleanshipping.com";
-$db_username = "root";
-$db_password = "";
+$db_host = "cer-db-instance.cevlxrbmakpq.us-west-2.rds.amazonaws.com";
+$db_username = "cerulean_user";
+$db_password = "citodvn480";
 $db = "cerulean_shipping";
 $db_port = "3306";
 
