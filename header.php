@@ -39,9 +39,9 @@
             Tracking
           </a>
           <div class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
-            <form>
-              <input type="tracking" class="form-control form-control-lg" id="trackingNumber1" placeholder="Tracking ID">
-              <button type="submit" class="btn btn-secondary btn-block btn-lg buttonColor">Track</button>
+            <form action="tracking.php" method="GET">
+              <input type="tracking" class="form-control form-control-lg" id="trackingNumber1" name="trackNum" placeholder="Tracking ID">
+              <button action="tracking.php" method="GET" type="submit" name="trackSubmit" class="btn btn-secondary btn-block btn-lg buttonColor">Track</button>
             </form>
           </li>
         <li class="nav-item">
@@ -52,15 +52,28 @@
           <!-- PHP CODE THAT CHANGES THE HTML IF USER IS LOGGED IN -->
           <?php
             if(isset($_SESSION['u_name'])) {
-              echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                Welcome, ', $_SESSION['f_name'], '
-              </a>';
-              echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
-              echo '<a class="dropdown-item" href="tracking.php">My Tracking Numbers</a>';
-              echo '<a class="dropdown-item" href="#">My Purchase History</a>';
-              echo '<div class="dropdown-divider"></div>';
-              echo '<form action="handlers/logoutHandler.php" method="POST"><button class="btn btn-secondary btn-block buttonColor" type="submit" name="logout" action="handlers/logoutHandler.php" method="POST">Logout</button></form></div>';
-              echo '</div>';
+              if ($_SESSION['u_name'] == 'employee') {
+                echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Welcome, ', $_SESSION['f_name'], '
+                </a>';
+                echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
+                echo '<a class="dropdown-item" href="tracking.php">Manage Deliveries</a>';
+                echo '<a class="dropdown-item" href="#">My Account</a>';
+                echo '<div class="dropdown-divider"></div>';
+                echo '<form action="handlers/logoutHandler.php" method="POST"><button class="btn btn-secondary btn-block buttonColor" type="submit" name="logout" action="handlers/logoutHandler.php" method="POST">Logout</button></form></div>';
+                echo '</div>';
+              }
+              else {
+                echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Welcome, ', $_SESSION['f_name'], '
+                  </a>';
+                  echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
+                  echo '<a class="dropdown-item" href="mytracking.php">My Tracking Numbers</a>';
+                  echo '<a class="dropdown-item" href="#">My Account</a>';
+                  echo '<div class="dropdown-divider"></div>';
+                  echo '<form action="handlers/logoutHandler.php" method="POST"><button class="btn btn-secondary btn-block buttonColor" type="submit" name="logout" action="handlers/logoutHandler.php" method="POST">Logout</button></form></div>';
+                  echo '</div>';
+              }
             }
             else {
               echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
