@@ -13,6 +13,9 @@
   .buttonColor {
     background: #2a52be;
   }
+  .anchorColor {
+    color: black;
+  }
   .navBarCustom {
     background: #A9A9A9;
   }
@@ -65,7 +68,7 @@
   }
   .thead-cerulean {
     background-color: #2A52BE;
-    color: white; 
+    color: white;
   }
   body {
     padding-top: 100px;
