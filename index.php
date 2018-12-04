@@ -63,12 +63,12 @@
       </div>
   </div>
       <div class="col-lg-6 trackingNumber2">
-        <form>
+        <form action="tracking.php" method="GET">
           <div class="form-row py-4">
             <div class="col-9">
-              <input type="tracking" class="form-control form-control-lg" id="trackingNumber2" placeholder="Tracking ID">
+              <input type="tracking" class="form-control form-control-lg" id="trackingNumber2" name="trackNum" placeholder="Tracking ID">
             </div>
-              <button type="submit" class="btn btn-secondary buttonColor">Track</button>
+              <button type="submit" class="btn btn-secondary buttonColor" name="trackSubmit" action="tracking.php">Track</button>
           </div>
         </form>
       </div>
