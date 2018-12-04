@@ -68,7 +68,7 @@ if (isset($_POST['register'])) {
        else {
          mysqli_stmt_bind_param($stmt, "sssssssssss", $firstname, $lastname, $username, $hashedpassword,$email, $address, $address2,
          $city, $state, $phone, $zipcode);
-         mysqli_stmt_execute($stmt);
+         mysqli_stmt_execute($stmt) or die(mysqli_error($connection));
          $result = mysqli_stmt_get_result($stmt);
          header('Location: ../index.php?register=success');
        }
