@@ -58,7 +58,7 @@
                 </a>';
                 echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
                 echo '<a class="dropdown-item" href="tracking.php">Manage Deliveries</a>';
-                echo '<a class="dropdown-item" href="#">My Account</a>';
+                echo '<a class="dropdown-item" href="account.php">My Account</a>';
                 echo '<div class="dropdown-divider"></div>';
                 echo '<form action="handlers/logoutHandler.php" method="POST"><button class="btn btn-secondary btn-block buttonColor" type="submit" name="logout" action="handlers/logoutHandler.php" method="POST">Logout</button></form></div>';
                 echo '</div>';
@@ -69,7 +69,7 @@
                   </a>';
                   echo '<div class="dropdown-menu" aria-labelledby="navbarDropdown">';
                   echo '<a class="dropdown-item" href="mytracking.php">My Tracking Numbers</a>';
-                  echo '<a class="dropdown-item" href="#">My Account</a>';
+                  echo '<a class="dropdown-item" href="account.php">My Account</a>';
                   echo '<div class="dropdown-divider"></div>';
                   echo '<form action="handlers/logoutHandler.php" method="POST"><button class="btn btn-secondary btn-block buttonColor" type="submit" name="logout" action="handlers/logoutHandler.php" method="POST">Logout</button></form></div>';
                   echo '</div>';
