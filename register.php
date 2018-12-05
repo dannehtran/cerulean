@@ -2,7 +2,11 @@
 <?php
   include_once "header.php";
  ?>
+
+
 <?php
+
+// Checks to see if passwords match, if so display an alert
 if (@$_GET['error'] == 'PasswordsDoNotMatch') {
  echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
          <strong>You did not enter the correct password twice!</strong>
@@ -12,6 +16,8 @@ if (@$_GET['error'] == 'PasswordsDoNotMatch') {
          </button>
        </div>';
 }
+
+// Checks to see if the username or email is already taken, if so display an alert
 if (@$_GET['error'] == 'UsernameOrEmailAlreadyTaken') {
  echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
          <strong>The Username or Email you have entered is already taken!</strong>
