@@ -51,7 +51,11 @@
 
           <!-- PHP CODE THAT CHANGES THE HTML IF USER IS LOGGED IN -->
           <?php
+
+            // If the session is set, change navbar to users accordingly
             if(isset($_SESSION['u_name'])) {
+
+              // If the user is an employee, change navbar to employee based webpages
               if ($_SESSION['u_name'] == 'employee') {
                 echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Welcome, ', $_SESSION['f_name'], '
@@ -63,6 +67,8 @@
                 echo '<form action="handlers/logoutHandler.php" method="POST"><button class="btn btn-secondary btn-block buttonColor" type="submit" name="logout" action="handlers/logoutHandler.php" method="POST">Logout</button></form></div>';
                 echo '</div>';
               }
+
+              // If the user is a customer, change navbar to customer based webpages
               else {
                 echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Welcome, ', $_SESSION['f_name'], '
@@ -75,6 +81,8 @@
                   echo '</div>';
               }
             }
+
+            // If the session is not set, set navbar to default
             else {
               echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Log In or Sign Up
