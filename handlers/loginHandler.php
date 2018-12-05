@@ -48,7 +48,15 @@ if(isset($_POST['login'])) {
         else if ($pwdCheck == true) {
           $_SESSION['u_name'] = $row['username'];
           $_SESSION['f_name'] = $row['first_name'];
+          $_SESSION['l_name'] = $row['last_name'];
+          $_SESSION['email'] = $row['email'];
           $_SESSION['c_id'] = $row['c_id'];
+          $_SESSION['address'] = $row['address'];
+          $_SESSION['address2'] = $row['address2'];
+          $_SESSION['city'] = $row['city'];
+          $_SESSION['state'] = $row['state'];
+          $_SESSION['phone'] = $row['phone_number'];
+          $_SESSION['zip'] = $row['zipcode'];
           header("Location: ../index.php?login=success");
           exit();
         }
