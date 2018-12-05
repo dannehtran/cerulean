@@ -95,7 +95,7 @@
       <!-- Drone Shipping Card -->
       <div class="col-4 d-flex align-items-stretch">
         <div class="card mx-auto shadow rounded border_color" style="width:400px">
-          <img class="card-img-top image-resize" src="images/drone.PNG" alt="drone">
+          <img class="card-img-top image-resize" src="images/drone_shipp.jpg" alt="drone">
           <div class="card-body buttonAlign">
             <h4 class="card-title">Drone Shipping</h4>
             <p class="card-text">Drone delivery is our newest shipping technology. We carry out your standard shipment with drones built with GPS tracking and accurate location services. Depending on your package weight, your delivery can be made within a few hours after your order/label has been placed in our newest branch office.</p>
