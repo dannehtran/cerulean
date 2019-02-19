@@ -56,7 +56,7 @@
             if(isset($_SESSION['u_name'])) {
 
               // If the user is an employee, change navbar to employee based webpages
-              if ($_SESSION['u_name'] == 'employee') {
+              if (isset($_SESSION['emp_id'])) {
                 echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Welcome, ', $_SESSION['f_name'], '
                 </a>';
@@ -69,7 +69,7 @@
               }
 
               // If the user is a customer, change navbar to customer based webpages
-              else {
+              else if (isset($_SESSION['c_id'])) {
                 echo '<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                   Welcome, ', $_SESSION['f_name'], '
                   </a>';
@@ -91,6 +91,18 @@
               echo '<form method="POST" action="handlers/loginHandler.php" class="p-3">';
               echo '<input type="text" class="form-control form-control-lg" name="username" placeholder="Username">';
               echo '<input type="password" class="form-control form-control-lg" name="password" placeholder="Password">';
+              echo '<div class="form-check">';
+              echo '<input class="form-check-input" type="radio" name="user_login" id="userLogin" value="reg_user" checked>';
+              echo '<label class="form-check-label" for="userLogin">';
+              echo 'User Login';
+              echo '</label>';
+              echo '</div>';
+              echo '<div class="form-check">';
+              echo '<input class="form-check-input" type="radio" name="user_login" id="employeeLogin" value="emp_user">';
+              echo '<label class="form-check-label" for="employeeLogin">';
+              echo 'Employee Login';
+              echo '</label>';
+              echo '</div>';
               echo '<button type="submit" name="login" action="handlers/loginHandler.php" class="btn btn-secondary btn-block btn-lg buttonColor">LOGIN</button>';
               echo '</form>';
               echo '<div class="dropdown-divider"></div>';
