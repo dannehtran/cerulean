@@ -18,7 +18,7 @@
                 <th>Date Received</th>
                 <th>Weight</th>
                 <th>Delivery Type</th>
-                <th>Delivered</th>
+                <th>Status</th>
               </tr>
               <tbody>
 
