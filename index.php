@@ -17,6 +17,27 @@
          </div>';
   }
 
+  if (@$_GET['error'] == 'noTrackingNumberEntered') {
+   echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+           <strong>You did not enter a Tracking Number!</strong>
+           Make sure you enter it correctly.
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>';
+  }
+
+  // Displays an alert if the user did not input a correct username
+  if (@$_GET['error'] == 'nouser') {
+   echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
+           <strong>You did not enter a correct Username</strong>
+           Please verify you are using the correct credentials.
+           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+             <span aria-hidden="true">&times;</span>
+           </button>
+         </div>';
+  }
+
   // Displays an alert if the user did not type in the right password
   if (@$_GET['error'] == 'wrongpwd') {
    echo '<div class="alert alert-warning alert-dismissible fade show text-center" role="alert">
