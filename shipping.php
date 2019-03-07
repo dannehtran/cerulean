@@ -42,15 +42,15 @@ include "header.php"
               </thead>
                 <tr>
                   <td>5-7 Days</td>
-                  <td>$20</td>
+                  <td>$5</td>
                 </tr>
                 <tr>
                   <td>3-4 Days</td>
-                  <td>$40</td>
+                  <td>$10</td>
                 </tr>
                 <tr>
                   <td>1-2 Days</td>
-                  <td>$75</td>
+                  <td>$55</td>
                 </tr>
               </table>
                 <form action="shippingForm.php" class="buttonPadding">
@@ -84,15 +84,15 @@ include "header.php"
               </thead>
                 <tr>
                   <td>2-3 hours</td>
-                  <td>$20</td>
+                  <td>$10</td>
                 </tr>
                 <tr>
                   <td>1 hour</td>
-                  <td>$40</td>
+                  <td>$20</td>
                 </tr>
                 <tr>
                   <td>EXPRESS 15-20  minutes</td>
-                  <td>$75</td>
+                  <td>$30</td>
                 </tr>
               </table>
                 <form action="shippingForm.php" class="buttonPadding">
@@ -125,15 +125,15 @@ include "header.php"
               </thead>
                 <tr>
                   <td>2 Days</td>
-                  <td>$20</td>
+                  <td>$10</td>
                 </tr>
                 <tr>
                   <td>1 Day</td>
-                  <td>$40</td>
+                  <td>$15</td>
                 </tr>
                 <tr>
                   <td>EXPRESS Overnight</td>
-                  <td>$75</td>
+                  <td>$20</td>
                 </tr>
               </table>
                 <form action="shippingForm.php" class="buttonPadding">
@@ -184,6 +184,8 @@ include "header.php"
 
     </div>
 <!--end of accordian class -->
+
+<script type="script/linking.js"></script>
 
  <!--Footer-->
 <?php
