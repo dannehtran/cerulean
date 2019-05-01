@@ -31,7 +31,7 @@ include "header.php"
       <div class="card shadow rounded border_color mx-5 col-md-6 mb-3"> <!--payment-->
         <h4 class="text-center">Payment</h4>
 
-        <div class="form-row"><!--card info Row 1-->
+        <div class="form-row justify-content-center"><!--card info Row 1-->
           <div class="col-md-4 mb-3">
             <label>First Name on Card</label>
             <input type="text" class="form-control text-center" name="cardFirstName" id="" placeholder="John" required="">
@@ -43,24 +43,30 @@ include "header.php"
           
         </div><!--END card info Row 1-->
 
-        <div class="form-row"><!--card info Row 2-->
+        <div class="form-row justify-content-center"><!--card info Row 2-->
           <div class="col-md-4 mb-3">
             <label>Credit Card Number</label>
             <input type="text" class="form-control text-center" name="cardNum" id="" placeholder="XXXX-XXXX-XXXX-XXXX" required>
           </div>
-          <div class="col-md-3 mb-3">
+          <div class="col-md-4 mb-3">
             <label>Acceptable Cards</label>
-            <img src="images/visa_logo.png"/>
-            <img src="images/mastercard_logo.png"/>
+            <div class="form-row">
+              <div class="col-md-4 mb-3">
+                <img src="images/visa_logo.png"/>
+              </div>
+              <div class="col-md-4 mb-3">
+                <img src="images/mastercard_logo.png"/>
+              </div>
+            </div>
           </div>
         </div><!--END card info row 2-->
         
-        <div class="form-row"><!--card info row 3-->
-          <div class="col-md-2 mb-3">
+        <div class="form-row justify-content-center"><!--card info row 3-->
+          <div class="col-md-4 mb-3">
             <label>CVV2</label>
             <input type="text" class="form-control text-center" name="CVV2" id="" placeholder="XXX" required>
           </div>
-          <div class="col-md-2 mb-3">
+          <div class="col-md-4 mb-3">
             <label>Exp Date</label>
             <input type="text" class="form-control text-center" name="expDate" id="" placeholder="XX/XX" required="">
             
