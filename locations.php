@@ -43,7 +43,7 @@ include "header.php"
               <h2 class="">Find a location near you:</h2>
               <div class="form-row py-4">
                 <div class="col-9">
-                  <input type="text" id="areaCode" name="areaCode" placeholder="Area Code" required="" class="form-control form-control-lg center"</form>
+                  <input type="text" id="areaCode" name="areaCode" placeholder="Area Code" required="" class="form-control form-control-lg center">
                 </div>
                   <button class="btn btn-secondary buttonColor" type="Submit">Submit</button>
               </div>
