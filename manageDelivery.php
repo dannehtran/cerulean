@@ -10,24 +10,30 @@
     <div class="card shadow rounded border_color" style="width:100%">
       <div class="card-body">
         <h1 class="card-title">Manage Deliveries</h1>
-          <table class="table text-center">
+          <table class="table text-center align-items-stretch">
             <thead class="thead-cerulean">
+              <div class="col-xs-12 col-sm-6 col-md-8">
               <tr>
+                <th></th>
                 <th>Tracking Number</th>
                 <th>Date Shipped</th>
                 <th>Date Received</th>
                 <th>Weight</th>
                 <th>Delivery Type</th>
+                <th>Comments</th>
                 <th>Status</th>
               </tr>
+              </div>
               <tbody>
+                <form method="POST" action="handlers/manageHandler.php">
+                  <div class="form-check">
 
                 <!-- PHP code to pull tracking information from the database -->
                 <?php
                 require 'db_connect.php';
 
                 // Prepares the query for information being pulled
-                $sql = 'SELECT parcel.emp_id, parcel.w_id, tn, date_received, delivered, date_shipped, weight, dev_type
+                $sql = 'SELECT parcel.emp_id, parcel.w_id, tn, date_received, delivered, date_shipped, weight, dev_type, comments
                         FROM parcel
                         INNER JOIN employee
                         ON parcel.emp_id = employee.emp_id
@@ -44,20 +50,44 @@
 
                   //Iterates through the rows and displays them in the table
                   while ($tracking = mysqli_fetch_assoc($query)) {
-                    if ($tracking['delivered'] == 0) {
-                        $delivery = '<span class="badge badge-pill badge-secondary">In Transit</span>';
+
+                    //Created arrays to display the drop down options
+                    $delivery_array = array("Processing", "In Transit", "In Delivery", "Delivered");
+                    $dev_array = array("Air", "Ground", "Drone", "Freight");
+
+                    //Created variables to make the options dynamic
+                    $delivery = "";
+                    $dev_type = "";
+
+                    foreach ($delivery_array as $deliver) {
+                      if ($deliver == $tracking['delivered']) {
+                        $delivery .= '<option selected value="' . $deliver . '">' . $deliver . '</option>';
+                      }
+                      else {
+                        $delivery .= '<option value="' . $deliver . '">' . $deliver . '</option>';
+                      }
                     }
-                    else {
-                      $delivery = '<span class="badge badge-pill badge-success">Delivered</span>';
+
+                    foreach ($dev_array as $dev) {
+                      if ($dev == $tracking['dev_type']) {
+                        $dev_type .= '<option selected value="' . $dev . '">' . $dev . '</option>';
+                      }
+                      else {
+                        $dev_type .= '<option value="' . $dev . '">' . $dev . '</option>';
+                      }
                     }
-                    echo '<tr>';
+
+                    $i++;
+                    echo '<div class="row"><div class="col-xs-12 col-sm-6 col-md-8"><tr>';
+                    echo '<td><input class="form-check-input" type="checkbox" name="trackCheck[' . $i . ']" id="' . $row['tn'] . '"></td>';
                     echo '<td><a href="tracking.php?trackNum='. $tracking['tn'] . '" name="trackSubmit" type="submit" class="btn btn-sml anchorColor">' . $tracking['tn'] . '</a></td>';
-                    echo '<td>' . $tracking['date_shipped'] . '</td>';
-                    echo '<td>' . $tracking['date_received'] . '</td>';
-                    echo '<td>' . $tracking['weight'] . ' lbs</td>';
-                    echo '<td>' . $tracking['dev_type'] . '</td>';
-                    echo '<td>' . $delivery . '</td>';
-                    echo '</tr>';
+                    echo '<td><input type="date" name="shipped" value="' . $tracking['date_shipped'] . '"></input></td>';
+                    echo '<td><input type="date" name="received" value="' . $tracking['date_received'] . '"></input></td>';
+                    echo '<td><input type="number" name="weight" value="' . $tracking['weight'] . '"></input>lbs</td>';
+                    echo '<td><select class="custom-select" name="dev_type" id="inputGroupSelect02">' . $dev_type . '</select></td>';
+                    echo '<td><input type="text" class="commentId" name="comment" value="' . $tracking['comments'] . '"></input></td>';
+                    echo '<td><select class="custom-select" name="delivery" id="inputGroupSelect01">' . $delivery . '</select></td>';
+                    echo '</tr></div></div>';
                   }
                 }
                 ?>
@@ -65,8 +95,15 @@
 
               </tbody>
           </table>
-      </div>
+          <div class="form-group text-center">
+            <button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="submit" action="handlers/manageHandler.php" name="update">Update Delivery</button>
+          </div>
+        </div>
+      </form>
     </div>
+  </div>
+  <div class="py-5">
+  </div>
 </div>
 <!--END OF TABLE -->
 

@@ -70,10 +70,18 @@
     background-color: #2A52BE;
     color: white;
   }
+  .commentId {
+    height: auto;
+  }
+  .addedSpace {
+    padding-top: 10000000px;
+  }
   body {
     padding-top: 100px;
     background-color: #e9ecef;
   }
   footer {
-    padding-top: 50px;
+    padding-top: 100px;
+    position: fixed;
+    bottom: 0;
   }

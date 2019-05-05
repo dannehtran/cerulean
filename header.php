@@ -14,6 +14,8 @@
   <meta charset="UTF-8">
   <meta name="description" content="We are a shipping company that provide services throughout the United States.">
   <meta name="keywords" content="Cerulean, Shipping, Tracking, Drones">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
@@ -33,7 +35,28 @@
         <a class="nav-link" href="shipping.php" id="shippingNav" role="button">
           Shipping
         </a>
+      </li>
+
+
+
+      <!--THIS IS THE TEST REGISTER BUTTON! MAKE SURE TO DELETE AFTER TESTING IS DONE !-->
+
+
+
+
+      <li class="nav-item dropdown">
+        <a class="nav-link" href="registerTest.php" id="shippingNav" role="button">
+          TESTREGISTER
+        </a>
         </li>
+
+
+
+        <!--THIS IS THE TEST REGISTER BUTTON! MAKE SURE TO DELETE AFTER TESTING IS DONE !-->
+
+
+
+
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Tracking

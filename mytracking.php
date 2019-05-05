@@ -19,6 +19,7 @@
                 <th>Weight</th>
                 <th>Delivery Type</th>
                 <th>Status</th>
+                <th>Comments</th>
               </tr>
               <tbody>
 
@@ -27,7 +28,7 @@
                 require 'db_connect.php';
 
                 // Prepares the query for information being pulled
-                $sql = 'SELECT parcel.c_id, parcel.w_id, tn, date_shipped, date_received, weight, delivered, dev_type
+                $sql = 'SELECT parcel.c_id, parcel.w_id, tn, date_shipped, date_received, weight, delivered, dev_type, comments
                         FROM parcel
                         INNER JOIN customer
                         ON parcel.c_id = customer.c_id
@@ -44,11 +45,17 @@
 
                   //Iterates through the rows and displays them in the table
                   while ($tracking = mysqli_fetch_assoc($query)) {
-                    if ($tracking['delivered'] == 0) {
+                    if ($tracking['delivered'] == "In Transit") {
                         $delivery = '<span class="badge badge-pill badge-secondary">In Transit</span>';
                     }
+                    elseif ($tracking['delivered'] == "In Delivery") {
+                        $delivery = '<span class="badge badge-pill badge-info">In Delivery</span>';
+                    }
+                    elseif ($tracking['delivered'] == "Delivered") {
+                        $delivery = '<span class="badge badge-pill badge-success">Delivered</span>';
+                    }
                     else {
-                      $delivery = '<span class="badge badge-pill badge-success">Delivered</span>';
+                        $delivery = '<span class="badge badge-pill badge-alert">Processing</span>';
                     }
                     echo '<tr>';
                     echo '<td><a href="tracking.php?trackNum='. $tracking['tn'] . '" name="trackSubmit" type="submit" class="btn btn-sml anchorColor">' . $tracking['tn'] . '</a></td>';
@@ -57,6 +64,7 @@
                     echo '<td>' . $tracking['weight'] . ' lbs</td>';
                     echo '<td>' . $tracking['dev_type'] . '</td>';
                     echo '<td>' . $delivery . '</td>';
+                    echo '<td>' . $tracking['comments'] . '</td>';
                     echo '</tr>';
                   }
                 }

@@ -21,6 +21,7 @@
                 <th>Weight</th>
                 <th>Delivery Type</th>
                 <th>Status</th>
+                <th>Comments</th>
               </tr>
               <tbody>
 
@@ -63,7 +64,7 @@
 
                         // If there is something in the row, prepare sql query for tracking number
                         $sql = 'SELECT warehouse.w_id, customer.c_id, warehouse.address AS w_address, customer.address AS c_address, tn, date_shipped, date_received
-                        , weight, delivered, dev_type FROM parcel, warehouse, customer
+                        , weight, delivered, dev_type, comments FROM parcel, warehouse, customer
                         WHERE parcel.w_id = warehouse.w_id AND parcel.c_id = customer.c_id AND tn = ' . $trackingNumber;
                         $query = mysqli_query($connection, $sql);
                         $result = mysqli_num_rows($query);
@@ -77,11 +78,17 @@
 
                           // Iterates through the rows and displays them in the tabe
                           while ($tracking = mysqli_fetch_assoc($query)) {
-                            if ($tracking['delivered'] == 0) {
-                              $delivery = '<span class="badge badge-pill badge-secondary">In Transit</span>';
+                            if ($tracking['delivered'] == "In Transit") {
+                                $delivery = '<span class="badge badge-pill badge-secondary">In Transit</span>';
+                            }
+                            elseif ($tracking['delivered'] == "In Delivery") {
+                                $delivery = '<span class="badge badge-pill badge-info">In Delivery</span>';
+                            }
+                            elseif ($tracking['delivered'] == "Delivered") {
+                                $delivery = '<span class="badge badge-pill badge-success">Delivered</span>';
                             }
                             else {
-                              $delivery = '<span class="badge badge-pill badge-success">Delivered</span>';
+                                $delivery = '<span class="badge badge-pill badge-warning">Processing</span>';
                             }
                             echo '<tr>';
                             echo '<td>' . $tracking['tn'] . '</td>';
@@ -92,6 +99,7 @@
                             echo '<td>' . $tracking['weight'] . ' lbs</td>';
                             echo '<td>' . $tracking['dev_type'] . '</td>';
                             echo '<td>' . $delivery . '</td>';
+                            echo '<td>' . $tracking['comments'] . '</td>';
                             echo '</tr>';
                           }
                         }
@@ -111,11 +119,12 @@
 
 
 <!-- TRACKING INPUT BAR -->
+<div class="py-5"></div>
 <div class="col-lg-6 trackingNumber2">
   <form action="tracking.php" method="GET">
-    <div class="form-row py-4">
+    <div class="form-row">
       <div class="col-9">
-        <input type="tracking" name ="trackNum" class="form-control form-control-lg" id="trackingNumber2" placeholder="Tracking ID">
+        <input type="tracking" name="trackNum" class="form-control form-control-lg" id="trackingNumber2" placeholder="Tracking ID">
       </div>
         <button type="submit" name="trackSubmit" class="btn btn-secondary buttonColor">Track</button>
     </div>
