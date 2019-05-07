@@ -44,7 +44,7 @@ if (isset($_POST['update'])) {
     else {
       $sql = 'UPDATE customer
       SET first_name = ?, last_name = ?, username = ?, email = ?, address = ?,
-      address2 = ?, city = ?, state = ?, phone_number = ?, zipcode =?
+      address2 = ?, city = ?, state = ?, phone_number = ?, zipcode = ?
       WHERE c_id = '. $c_id;
 
       // Checks to see if the INSERT SQL query is prepared properly

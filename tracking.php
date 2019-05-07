@@ -33,7 +33,6 @@
 
                   // Connects to the database using db_connectphph and sets the GET variables
                   require 'db_connect.php';
-
                   $trackingNumber = $_GET['trackNum'];
 
                   // Checks if tracking is empty

@@ -11,42 +11,46 @@ if (isset($_POST['update'])) {
   $weight = $_POST['weight'];
   $delivery = $_POST['delivery'];
   $dev_type = $_POST['dev_type'];
-  $comment = $_POST['comment'];
-  $city = $_POST['city_up'];
+  $comment = $_POST['comments'];
+  $checked = $_POST['trackCheck'];
 
-  // Preparing a query to update tracking fields
+  if (empty($checked)) {
+    header("Location: ../manageDelivery.php?error=noCheckedTracking");
+  }
+  else {
+
+    // Loop that iterates the checkbox array to see how many rows will be updated
+    foreach ($checked as $value) {
+
+      // Preparing a query to update tracking information
       $sql = 'UPDATE parcel
       SET date_shipped = ?, date_received = ?, weight = ?, delivered = ?,
       dev_type = ?, comments = ?
-      WHERE c_id = '. $c_i;
+      WHERE tn = ' . $value;
       $stmt = mysqli_stmt_init($connection);
 
-      // Checks to see if the INSERT SQL query is prepared properly
        if (!mysqli_stmt_prepare($stmt, $sql)) {
          header("Location: ../manageDelivery.php?error=sqlUpdateError");
          exit();
        }
 
-       // If the query is prepared properly, bind and execute the insert SQL query to the database
+       // If the query is prepared properly, bind and execute the update SQL query to the database
        else {
-         mysqli_stmt_bind_param($stmt, "ssssss", $firstname, $lastname, $username, $email, $address, $address2,
-         $city, $state, $phone, $zipcode);
+
+         // Checks to see if the UPDATE SQL query is prepared properly
+         mysqli_stmt_bind_param($stmt, "ssssss", $date_shipped, $date_received, $weight, $delivery, $dev_type, $comment);
          mysqli_stmt_execute($stmt) or die(mysqli_error($connection));
          $result = mysqli_stmt_get_result($stmt);
-         $_SESSION['u_name'] = $username;
-         $_SESSION['f_name'] = $firstname;
-         $_SESSION['l_name'] = $lastname;
-         $_SESSION['email'] = $email;
-         $_SESSION['address'] = $address;
-         $_SESSION['address2'] = $address2;
-         $_SESSION['city'] = $city;
-         $_SESSION['state'] = $state;
-         $_SESSION['phone'] = $phone;
-         $_SESSION['zip'] = $zipcode;
+        /* printf($date_shipped);
+         printf($date_received);
+         printf($weight);
+         printf($delivery);
+         printf($dev_type);
+         printf($comment);*/
+
          header('Location: ../manageDelivery.php?update=success');
-       }
+      }
     }
   }
-
 }
- ?>
+?>

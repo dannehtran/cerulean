@@ -5,6 +5,8 @@
   <!-- Copyright -->
   <div class="footer-copyright py-3 copyright">© 2018 Copyright:
     <a class="copyRightDefault" href="#">Ceruleanshipping.com</a>
+    <span class="mx-5">|</span>
+    <a class="copyRightDefault" href="CeruleanShippingAUP.pdf">Acceptable Use Policy</a>
   </div>
 </footer>
 
