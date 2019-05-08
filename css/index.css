@@ -76,12 +76,14 @@
   .addedSpace {
     padding-top: 10000000px;
   }
+  .help-block {
+    color: #e59400;
+  }
   body {
     padding-top: 100px;
     background-color: #e9ecef;
   }
   footer {
     padding-top: 100px;
-    position: fixed;
     bottom: 0;
   }

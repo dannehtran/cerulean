@@ -17,9 +17,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
   <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+  <script src="script/app.js"></script>
 </head>
 
-<body>
+<body ng-app="validationApp" ng-controller="mainController">
 
   <!-- THIS IS THE NAV BAR -->
   <nav class="navbar navbar-expand-lg navbar-dark fixed-top navBarCustom">
@@ -58,13 +59,13 @@
 
 
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Tracking
           </a>
           <div class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
             <form action="tracking.php" method="GET">
               <input type="tracking" class="form-control form-control-lg" id="trackingNumber1" name="trackNum" placeholder="Tracking ID">
-              <button action="tracking.php" method="GET" type="submit" name="trackSubmit" class="btn btn-secondary btn-block btn-lg buttonColor">Track</button>
+              <button method="GET" type="submit" name="trackSubmit" class="btn btn-secondary btn-block btn-lg buttonColor">Track</button>
             </form>
           </li>
         <li class="nav-item">
