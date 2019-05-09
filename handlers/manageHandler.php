@@ -41,12 +41,6 @@ if (isset($_POST['update'])) {
          mysqli_stmt_bind_param($stmt, "ssssss", $date_shipped, $date_received, $weight, $delivery, $dev_type, $comment);
          mysqli_stmt_execute($stmt) or die(mysqli_error($connection));
          $result = mysqli_stmt_get_result($stmt);
-        /* printf($date_shipped);
-         printf($date_received);
-         printf($weight);
-         printf($delivery);
-         printf($dev_type);
-         printf($comment);*/
 
          header('Location: ../manageDelivery.php?update=success');
       }
