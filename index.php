@@ -84,12 +84,17 @@
       </div>
   </div>
       <div class="col-lg-6 trackingNumber2">
-        <form action="tracking.php" method="GET">
+        <form action="tracking.php" method="GET" name="trackForm" ng-submit="submitForm(trackForm.$valid)" novalidate>
           <div class="form-row py-4">
             <div class="col-9">
-              <input type="tracking" class="form-control form-control-lg" id="trackingNumber2" name="trackNum" placeholder="Tracking ID">
+              <input type="number" class="form-control form-control-lg" id="trackingNumber2" name="trackNum" placeholder="Tracking ID" ng-model="trackNum" required>
             </div>
-              <button type="submit" class="btn btn-secondary buttonColor" name="trackSubmit" action="tracking.php">Track</button>
+              <button type="submit" class="btn btn-secondary buttonColor" ng-disabled="trackForm.$invalid" name="trackSubmit" action="tracking.php">Track</button>
+              <div>
+                <p ng-show="trackForm.trackNum.$invalid && !trackForm.trackNum.$pristine" class="help-block">
+                  Please enter your tracking number.
+                </p>
+              </div>
           </div>
         </form>
       </div>
