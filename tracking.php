@@ -120,12 +120,17 @@
 <!-- TRACKING INPUT BAR -->
 <div class="py-5"></div>
 <div class="col-lg-6 trackingNumber2">
-  <form action="tracking.php" method="GET">
+  <form action="tracking.php" method="GET" ng-submit="submitForm(trackFormPage.$valid)" name="trackFormPage" novalidate>
     <div class="form-row">
       <div class="col-9">
-        <input type="tracking" name="trackNum" class="form-control form-control-lg" id="trackingNumber2" placeholder="Tracking ID">
+        <input type="tracking" name="trackNum" class="form-control form-control-lg" id="trackingNumber2" placeholder="Tracking ID" ng-model="trackNum" required>
       </div>
-        <button type="submit" name="trackSubmit" class="btn btn-secondary buttonColor">Track</button>
+        <button type="submit" name="trackSubmit" class="btn btn-secondary buttonColor" ng-disabled="trackFormPage.$invalid">Track</button>
+        <div>
+          <p ng-show="trackFormPage.trackNum.$invalid && !trackFormPage.trackNum.$pristine" class="help-block">
+            Please enter your tracking number.
+          </p>
+        </div>
     </div>
   </form>
 </div>
