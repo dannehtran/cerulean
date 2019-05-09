@@ -1,18 +1,12 @@
-// app.js
-// create angular app
+// Create AngularJS App
 var validationApp = angular.module('validationApp', []);
 
-// create angular controller
+// Create AngularJS Controller
 validationApp.controller('mainController', function($scope) {
   $scope.password = {
     password_reg: "",
     password2_reg: ""
   };
-
-  // (?=(.*\d){2}) --> atleast 1 digits
-  // (?=(.*[a-z]){2}) --> atleast 1 lower case chars
-  // (?=(.*[A-Z]){2}) --> atleast 1 lower case chars
-  // (?=(.*[!@#$%]){2}) --> atleast 1 special chars, can be any one of !, @, #, $, %
 
   // Check to see if the password has an uppercase, lowercase, number and special character
   $scope.pattern = /(?=(.*\d){1})(?=(.*[a-z]){1})(?=(.*[A-Z]){1})(?=(.*[!@#$%]){1})/;
