@@ -26,7 +26,7 @@ if (isset($_POST['update'])) {
       $sql = 'UPDATE parcel
       SET date_shipped = ?, date_received = ?, weight = ?, delivered = ?,
       dev_type = ?, comments = ?
-      WHERE tn = ' . $value;
+      WHERE tn = ?';
       $stmt = mysqli_stmt_init($connection);
 
        if (!mysqli_stmt_prepare($stmt, $sql)) {
@@ -38,7 +38,7 @@ if (isset($_POST['update'])) {
        else {
 
          // Checks to see if the UPDATE SQL query is prepared properly
-         mysqli_stmt_bind_param($stmt, "ssssss", $date_shipped, $date_received, $weight, $delivery, $dev_type, $comment);
+         mysqli_stmt_bind_param($stmt, "sssssss", $date_shipped, $date_received, $weight, $delivery, $dev_type, $comment, $value);
          mysqli_stmt_execute($stmt) or die(mysqli_error($connection));
          $result = mysqli_stmt_get_result($stmt);
 
