@@ -37,35 +37,19 @@
           Shipping
         </a>
       </li>
-
-
-
-      <!--THIS IS THE TEST REGISTER BUTTON! MAKE SURE TO DELETE AFTER TESTING IS DONE !-->
-
-
-
-
-      <li class="nav-item dropdown">
-        <a class="nav-link" href="registerTest.php" id="shippingNav" role="button">
-          TESTREGISTER
-        </a>
-        </li>
-
-
-
-        <!--THIS IS THE TEST REGISTER BUTTON! MAKE SURE TO DELETE AFTER TESTING IS DONE !-->
-
-
-
-
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Tracking
           </a>
           <div class="dropdown-menu p-3" aria-labelledby="navbarDropdown">
-            <form action="tracking.php" method="GET">
-              <input type="tracking" class="form-control form-control-lg" id="trackingNumber1" name="trackNum" placeholder="Tracking ID">
-              <button method="GET" type="submit" name="trackSubmit" class="btn btn-secondary btn-block btn-lg buttonColor">Track</button>
+            <form action="tracking.php" method="GET" ng-submit="submitForm(trackFormHead.$valid)" name="trackFormHead" novalidate>
+              <input type="number" class="form-control form-control-lg" id="trackingNumber1" name="trackNum" placeholder="Tracking ID" ng-model="trackNum" required>
+              <div>
+                <p ng-show="trackFormHead.trackNum.$invalid && !trackFormHead.trackNum.$pristine" class="help-block">
+                  Please enter your tracking number.
+                </p>
+              </div>
+              <button method="GET" type="submit" name="trackSubmit" ng-disabled="trackFormHead.$invalid" class="btn btn-secondary btn-block btn-lg buttonColor">Track</button>
             </form>
           </li>
         <li class="nav-item">
