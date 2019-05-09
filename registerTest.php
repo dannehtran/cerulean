@@ -202,15 +202,17 @@ if (@$_GET['error'] == 'UsernameOrEmailAlreadyTaken') {
    </div>
    <div class="form-group text-center">
      <div class="form-check">
-       <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-       <label class="form-check-label" for="invalidCheck">
+       <input class="form-check-input" type="checkbox" ng-model="checked" id="invalidCheck" required>
+       <label class="form-check-label">
          Agree to terms and conditions
        </label>
        <div class="invalid-feedback">
+         <p class="help-block" ng-show="validationmsg">
          You must agree before submitting.
+        </p>
        </div>
      </div>
-     <button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="submit" action="handlers/registerHandler.php" name="register" ng-disabled="regForm.$invalid">Sign Up</button>
+     <button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="submit" action="handlers/registerHandler.php" name="register" ng-disabled="regForm.$invalid" ng-click="checkvalidation();">Sign Up</button>
    </div>
  </form>
 </div>
