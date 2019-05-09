@@ -55,7 +55,7 @@
                         $delivery = '<span class="badge badge-pill badge-success">Delivered</span>';
                     }
                     else {
-                        $delivery = '<span class="badge badge-pill badge-alert">Processing</span>';
+                        $delivery = '<span class="badge badge-pill badge-warning">Processing</span>';
                     }
                     echo '<tr>';
                     echo '<td><a href="tracking.php?trackNum='. $tracking['tn'] . '" name="trackSubmit" type="submit" class="btn btn-sml anchorColor">' . $tracking['tn'] . '</a></td>';
