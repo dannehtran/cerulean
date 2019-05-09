@@ -144,7 +144,6 @@
     <button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="submit" action="handlers/accountHandler.php" name="update">Update Information</button>
   </div>
 </form>
-<button class="btn btn-secondary btn-rounded mt-3 buttonColor" type="submit" action="#" name="changePwd">Change Password (Indevelopment)</button>
 </div>
 
 <!-- FOOTER -->
